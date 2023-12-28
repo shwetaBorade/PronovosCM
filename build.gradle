@@ -1,0 +1,99 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    ext {
+        kotlin_version = '1.6.21'
+    }
+    repositories {
+        google()
+        jcenter()
+       // maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
+        classpath 'com.google.gms:google-services:4.3.4'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // classpath 'io.fabric.tools:gradle:1.+'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+ext.mySupportVersion = "1.3.1"
+ext.myLifeCycleVersion = "2.2.0"
+ext.myRoomVersion = "2.4.2"
+ext.myBuildToolsVersion="30.0.2"
+ext.myMinSdkVersion=16
+ext.myTargetSdkVersion=34
+ext.myCompileSdkVersion=34
+
+ext.pdfnetGroup = {dependencyHandler->
+    delegate = dependencyHandler
+
+    implementation "com.pdftron:pdftron@aar"
+}
+
+ext.supportLibGroup = {dependencyHandler->
+    delegate = dependencyHandler
+
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation "androidx.appcompat:appcompat:$mySupportVersion"
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "com.google.android.material:material:1.5.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$myLifeCycleVersion"
+    implementation "androidx.preference:preference:1.1.0"
+
+    implementation "com.github.clans:fab:1.6.4"
+    implementation "com.edmodo:cropper:2.0.0"
+
+    implementation "commons-io:commons-io:2.4"
+    implementation "org.apache.commons:commons-lang3:3.5"
+    implementation "com.google.code.gson:gson:2.8.0"
+
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxjava:2.2.2"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
+
+    implementation "com.squareup.picasso:picasso:2.71828"
+    implementation "org.ccil.cowan.tagsoup:tagsoup:1.2.1"
+
+    implementation "androidx.room:room-runtime:$myRoomVersion"
+    annotationProcessor "androidx.room:room-compiler:$myRoomVersion"
+
+    //Event bus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+}
+
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "s3://pdftron-maven/release"
+            credentials(AwsCredentials) {
+                accessKey AWS_ACCESS_KEY
+                secretKey AWS_SECRET_KEY
+            }
+        }
+        maven { url "https://jitpack.io" }
+
+        flatDir {
+            dirs '../lib'
+        }
+//        maven {
+//            url '//                manifestPlaceholders = [pdftronLicenseKey:"demo:shweta.jain@galaxyweblinks.in:72bb943d01a03b75651b6b6ac16230889932eb5e1a111d2841"]'
+//        }
+    }
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

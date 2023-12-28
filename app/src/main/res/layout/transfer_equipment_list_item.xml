@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/equipmentDetailCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_2sdp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/errorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/equipmentNameTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/equipmentNameTextView"
+                app:srcCompat="@drawable/ic_exclamation" />
+
+            <TextView
+                android:id="@+id/equipmentNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:textColor="@color/gray_4a4a4a"
+                android:textSize="@dimen/dashboard_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/textViewOptions"
+                app:layout_constraintStart_toEndOf="@id/errorView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/trackingNumberTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:text="Tracking #"
+                android:textColor="@color/gray_4a4a4a"
+                android:textSize="@dimen/dashboard_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/textViewOptions"
+                app:layout_constraintStart_toEndOf="@id/errorView"
+                app:layout_constraintTop_toBottomOf="@id/equipmentNameTextView" />
+
+            <TextView
+                android:id="@+id/trackingNumberTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:visibility="gone"
+                android:text="@string/status"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size"
+                app:layout_constraintEnd_toStartOf="@id/textViewOptions"
+                app:layout_constraintStart_toEndOf="@id/errorView"
+                app:layout_constraintTop_toBottomOf="@id/trackingNumberTextView" />
+
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="sans-serif"
+                android:text="@string/status"
+                android:textColor="@color/gray_4a4a4a"
+                android:textSize="@dimen/dashboard_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/textViewOptions"
+                app:layout_constraintStart_toEndOf="@id/errorView"
+                app:layout_constraintTop_toBottomOf="@id/trackingNumberTV" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/equipmentStatusDetailView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/status"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size"
+                app:layout_constraintEnd_toStartOf="@id/textViewOptions"
+                app:layout_constraintStart_toEndOf="@id/errorView"
+                app:layout_constraintTop_toBottomOf="@id/statusTextView">
+
+                <TextView
+                    android:id="@+id/statusTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/status"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toStartOf="@id/statusViewTV"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/statusViewTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/status"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/statusTV"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/equipmentDetailView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/status"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size"
+                app:layout_constraintEnd_toStartOf="@id/textViewOptions"
+                app:layout_constraintStart_toEndOf="@id/errorView"
+                app:layout_constraintTop_toBottomOf="@id/equipmentStatusDetailView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/eqDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/quantityTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:maxLines="2"
+                        android:text="Quantity (EA)"
+                        android:textColor="@color/gray_4a4a4a"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/unitsTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/unitsTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:maxLines="2"
+                        android:text="Units"
+                        android:textColor="@color/gray_4a4a4a"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/quantityTextView"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/eqDetail1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/eqDetail">
+
+                    <TextView
+                        android:id="@+id/quantityTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="2"
+                        android:text="Quantity (EA)"
+                        android:textColor="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintEnd_toStartOf="@id/unitsTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/unitsTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="2"
+                        android:text="Units"
+                        android:textColor="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/quantityTV"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/eqDetail3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/eqDetail1">
+
+                    <TextView
+                        android:id="@+id/weightTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:maxLines="2"
+                        android:text="Weight (lbs)"
+                        android:textColor="@color/gray_4a4a4a"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/totalWeightTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/totalWeightTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:maxLines="2"
+                        android:text="Total Weight"
+                        android:textColor="@color/gray_4a4a4a"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/weightTextView"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/eqDetail4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/eqDetail3">
+
+                    <TextView
+                        android:id="@+id/weightTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="2"
+                        android:text="Quantity (EA)"
+                        android:textColor="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintEnd_toStartOf="@id/totalWeightTV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/totalWeightTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="2"
+                        android:text="Units"
+                        android:textColor="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/weightTV"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/_6sdp"
+
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingRight="@dimen/_6sdp"
+                android:text="&#8942;"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/gray_808ba2"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/equipmentNameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

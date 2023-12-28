@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "406065115957",
+    "firebase_url": "https://pronovoscm.firebaseio.com",
+    "project_id": "pronovoscm",
+    "storage_bucket": "pronovoscm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406065115957:android:57622c337b5d5f753f927c",
+        "android_client_info": {
+          "package_name": "com.pronovoscm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406065115957-h168uebgld8796n4sulbasls8jis0sk9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pronovoscm",
+            "certificate_hash": "8516f01255d33972f83d9867f136806681bd1fd1"
+          }
+        },
+        {
+          "client_id": "406065115957-5rbarof64afsg4efbjcdpmrmualbsjn7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pronovoscm",
+            "certificate_hash": "a523035ee09684857c6c993a2756acc25d9c39fa"
+          }
+        },
+        {
+          "client_id": "406065115957-f4isspkfdl97m7kao8nuqqojbh5pgd1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASPC6IWHoRN7Fw9yeT7ZELRFBUyZIEBjc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406065115957-f4isspkfdl97m7kao8nuqqojbh5pgd1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

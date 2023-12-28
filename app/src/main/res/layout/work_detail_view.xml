@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_fafafa"
+    android:focusable="true"
+
+    android:focusableInTouchMode="true">
+
+
+    <include
+        android:id="@+id/toolbarView"
+        layout="@layout/toolbar_view"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/offlineTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_12577b"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/offline_mode"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_10sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolbarView" />
+    <ScrollView
+        android:id="@+id/addCrewView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/toolbarView"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:background="@color/white"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/offlineTextView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/companyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="2sp"
+                android:text="@string/company"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size"
+                app:layout_constraintStart_toStartOf="parent" />
+            <!--
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/companySpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/companyTextView"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp" />-->
+
+            <RelativeLayout
+                android:id="@+id/allKeyword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/companyTextView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:background="@drawable/rounded_gray_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <TextView
+                    android:id="@+id/companyListNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/please_select_one"
+                    android:layout_marginLeft="@dimen/_9sdp"
+                    android:paddingTop="@dimen/_11sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/gray_747e8d"
+                    android:textColorHint="#838484"
+                    android:textSize="@dimen/dashboard_text_size"
+                    android:layout_toLeftOf="@id/companyExpandImageView"/>
+
+                <ImageView
+                    android:id="@+id/companyExpandImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_expand_more" />
+
+
+                <!--  <ImageView
+                      android:id="@+id/expandImageView"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"
+                      android:layout_marginRight="@dimen/_4sdp"
+                      app:srcCompat="@drawable/ic_expand_more" />-->
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/allKeyword"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/location"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/tradespinnewView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/locationTextView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:background="@drawable/rounded_gray_border">
+
+                <EditText
+                    android:id="@+id/locationEditText"
+                    style="@style/BasicEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_9sdp"
+                    android:layout_marginRight="@dimen/_9sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/enter_location"
+                    android:importantForAutofill="no"
+                    android:maxLines="4"
+                    android:textColorHint="@color/gray_747e8d"
+                    android:textColor="@color/gray_747e8d"
+                    android:nextFocusUp="@id/passwordEditText"
+                    android:paddingTop="@dimen/_11sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textSize="@dimen/crew_company_text_size"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/detailSummaryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tradespinnewView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/details_summary"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/detailsSummaryView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detailSummaryTextView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:background="@drawable/rounded_gray_border">
+
+                <EditText
+                    android:id="@+id/detailSummaryEditText"
+                    style="@style/BasicEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_9sdp"
+                    android:layout_marginRight="@dimen/_9sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/enter_details_summary"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:nextFocusUp="@id/passwordEditText"
+                    android:textColorHint="@color/gray_747e8d"
+                    android:textColor="@color/gray_747e8d"
+                    android:paddingTop="@dimen/_11sdp"
+                    android:maxLines="4"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textSize="@dimen/crew_company_text_size"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/attachmentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detailsSummaryView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/attachment"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size" />
+
+            <TextView
+                android:id="@+id/addTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:background="@drawable/ic_rounded_orange"
+                android:paddingLeft="@dimen/_12sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingRight="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:text="@string/add"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/add_text_size"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/attachmentRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/attachmentTextView"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_12sdp"
+                tools:list="horizontal"
+                tools:listitem="@layout/work_details_attachment_item_list" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/attachmentRecycleView"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <TextView
+                    android:id="@+id/saveTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/cancelTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="@drawable/rounded_blue_button"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_9sdp"
+                    android:text="@string/save"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_14sdp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cancelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_9sdp"
+                    android:background="@drawable/rounded_button_gray_border"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_9sdp"
+                    android:paddingBottom="@dimen/_9sdp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray_4a4a4a"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:textSize="@dimen/text_size_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/saveTextView" />
+
+                <TextView
+                    android:id="@+id/deleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:background="@drawable/rounded_red_button"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_9sdp"
+                    android:paddingBottom="@dimen/_9sdp"
+                    android:text="@string/delete"
+                    android:textAllCaps="true"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_14sdp"
+
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cancelTextView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appbarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/appbarToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@color/colorPrimary"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/leftImageView"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/ic_logout"
+                android:contentDescription="@string/pronovos_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="@dimen/_2sdp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/container_right_image"
+                app:layout_constraintStart_toEndOf="@id/leftImageView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="title of page" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_right_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/rightImageView"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    app:srcCompat="@drawable/ic_filter_regions"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/pronovos_image"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/addImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/syncImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    android:contentDescription="Sync old files"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintEnd_toStartOf="@id/rightImageView"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_sync_image" />
+
+                <ProgressBar
+                    android:id="@+id/syncProgressView"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:layout_marginEnd="@dimen/_13sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    android:indeterminateTint="@color/white"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/rightImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/emailSubmitImageView"
+                    android:layout_width="@dimen/_17sdp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    app:srcCompat="@drawable/ic_email_submit"
+                    android:contentDescription="@string/pronovos_image"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/cameraImageView"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_19sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    app:srcCompat="@drawable/ic_add_photo"
+                    android:contentDescription="@string/pronovos_image"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/image_bug_report"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_19sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    app:srcCompat="@drawable/report_bug"
+                    android:contentDescription="@string/pronovos_image"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/image_auto_sync"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/image_auto_sync"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_19sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    app:srcCompat="@drawable/ic_auto_sync_folder"
+                    android:contentDescription="@string/pronovos_image"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/filterTextView"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/red_circle_view"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@id/rightImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewSubmit"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    app:srcCompat="@drawable/selector_submit_annotation"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/pronovos_image"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/editImageView"
+                    android:layout_width="@dimen/_18sdp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    app:srcCompat="@drawable/ic_edit"
+                    android:contentDescription="@string/pronovos_image"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/addImageView"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    app:srcCompat="@drawable/ic_add_white"
+                    android:contentDescription="@string/pronovos_image"
+                    android:visibility="gone"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/deleteImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/addView"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    android:contentDescription="@string/pronovos_image"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/addImageView"
+                    app:layout_constraintEnd_toEndOf="@id/addImageView"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:layout_constraintStart_toStartOf="@id/addImageView"
+                    app:layout_constraintTop_toTopOf="@id/addImageView" />
+
+
+                <TextView
+                    android:id="@+id/linkExistingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:fontFamily="sans-serif"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/link_existing"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dashboard_text_size"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/deleteImageView"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    android:layout_marginEnd="@dimen/_13sdp"
+                    app:srcCompat="@drawable/ic_delete"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/pronovos_image"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+</com.google.android.material.appbar.AppBarLayout>

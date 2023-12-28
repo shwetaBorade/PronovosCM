@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/popup_menu_padding">
+
+        <RelativeLayout
+            android:id="@+id/popupView"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow"
+            >
+                <TextView
+                    android:id="@+id/editTextView"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:text="@string/edit"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/gray_4a4a4a"
+                    android:textSize="@dimen/dashboard_text_size"/>
+
+                <View
+                    android:id="@+id/dividerMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/option_menu_divider"
+                    android:layout_below="@+id/editTextView"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:id="@+id/deleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="@dimen/_15sdp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/gray_4a4a4a"
+                    android:textSize="@dimen/dashboard_text_size"
+                    android:layout_below="@+id/dividerMenu"/>
+        </RelativeLayout>
+</RelativeLayout>

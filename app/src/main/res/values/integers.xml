@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <integer name="quantity_length" tools:ignore="MissingDefaultResource">4</integer>
+    <integer name="impact_and_root_cause_grid_size">2</integer>
+</resources>

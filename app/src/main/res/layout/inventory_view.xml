@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+
+    android:focusableInTouchMode="true"
+    tools:context=".activity.InventoryActivity">
+
+    <include
+        android:id="@+id/toolbarView"
+        layout="@layout/toolbar_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/offlineTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_12577b"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/offline_mode"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_10sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolbarView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offlineTextView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/searchViewConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/searchTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:lineSpacingExtra="2sp"
+                    android:text="@string/search_equipment"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RelativeLayout
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    app:layout_constraintEnd_toStartOf="@id/searchTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/searchTV">
+
+                    <EditText
+                        android:id="@+id/searchDrawingEditText"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:background="@android:color/transparent"
+                        android:focusedByDefault="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/search_equipment"
+                        android:imeOptions="flagNoExtractUi"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:nextFocusUp="@id/passwordEditText"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/searchTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/rounded_light_gray_button"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/search"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintBottom_toBottomOf="@id/searchView"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/searchView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <FrameLayout
+                android:id="@+id/listContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

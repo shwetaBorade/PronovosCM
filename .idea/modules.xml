@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PronovosCM.iml" filepath="$PROJECT_DIR$/.idea/modules/PronovosCM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PDFViewCtrlTools/PronovosCM.PDFViewCtrlTools.iml" filepath="$PROJECT_DIR$/.idea/modules/PDFViewCtrlTools/PronovosCM.PDFViewCtrlTools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PDFViewCtrlTools/PronovosCM.PDFViewCtrlTools.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PDFViewCtrlTools/PronovosCM.PDFViewCtrlTools.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PDFViewCtrlTools/PronovosCM.PDFViewCtrlTools.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/PDFViewCtrlTools/PronovosCM.PDFViewCtrlTools.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PronovosCM.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PronovosCM.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PronovosCM.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PronovosCM.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PronovosCM.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PronovosCM.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/PronovosCM.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/PronovosCM.library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/PronovosCM.library.main.iml" filepath="$PROJECT_DIR$/.idea/modules/library/PronovosCM.library.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/PronovosCM.library.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library/PronovosCM.library.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PDFViewCtrlTools/pronovoscm-android_20nov23.PronovosCM.PDFViewCtrlTools.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/PDFViewCtrlTools/pronovoscm-android_20nov23.PronovosCM.PDFViewCtrlTools.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/pronovoscm-android_20nov23.PronovosCM.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/pronovoscm-android_20nov23.PronovosCM.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/pronovoscm-android_20nov23.PronovosCM.library.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library/pronovoscm-android_20nov23.PronovosCM.library.androidTest.iml" />
+    </modules>
+  </component>
+</project>

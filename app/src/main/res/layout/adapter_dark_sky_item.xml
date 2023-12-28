@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_3sdp"
+        android:padding="@dimen/_2sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:cardElevation="@dimen/_1sdp"
+        app:cardPreventCornerOverlap="false"
+        app:cardBackgroundColor="@android:color/transparent"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/textViewTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:background="@color/gray_dedede"
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/text_size_10sdp"
+                tools:text="10:30 PM" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewTime"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/imageViewWeather"
+                    android:layout_width="@dimen/weather_ic_30sdp"
+                    android:layout_height="@dimen/weather_ic_30sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:contentDescription="@string/pronovos_image"
+                    app:srcCompat="@drawable/ic_folder_bg" />
+
+
+                <TextView
+                    android:id="@+id/textViewSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageViewWeather"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/text_size_10sdp"
+                    tools:text="Clear" />
+
+                <TextView
+                    android:id="@+id/textViewTemperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewSummary"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/text_size_10sdp"
+                    tools:text="55.87*F" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>

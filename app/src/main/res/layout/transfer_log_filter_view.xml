@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_fafafa"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.TransferOverviewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbarView"
+            layout="@layout/toolbar_view" />
+
+        <TextView
+            android:id="@+id/offlineTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_12577b"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/offline_mode"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10sdp"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginRight="@dimen/_9sdp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/filterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:lineSpacingExtra="0sp"
+                    android:text="Filter"
+                    android:textColor="@color/gray_4a4a4a"
+                    android:textSize="@dimen/dashboard_text_size"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/pickupTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/pick_up_location"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/filterTextView"
+                    app:layout_goneMarginTop="@dimen/_12sdp" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/enterPickupView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pickupTextView">
+
+                    <TextView
+                        android:id="@+id/enterPickupViewET"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:background="@android:color/transparent"
+                        android:focusedByDefault="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/enter_pick_up_location_here"
+                        android:importantForAutofill="no"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:nextFocusUp="@id/pickUpTimeViewET"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/dropoffTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/drop_off_location"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/enterPickupView"
+                    app:layout_goneMarginTop="@dimen/_12sdp" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/enterDropoffView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dropoffTextView">
+
+                    <TextView
+                        android:id="@+id/enterDropoffViewET"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:background="@android:color/transparent"
+                        android:focusedByDefault="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/enter_drop_off_location_here"
+                        android:importantForAutofill="no"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:nextFocusUp="@id/pickUpTimeViewET"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/pickupDateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/pick_up_date"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/enterDropoffView"
+                    app:layout_goneMarginTop="@dimen/_12sdp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/pickupFromDateView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/unloadingMethodTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    app:layout_constraintEnd_toStartOf="@id/pickupToDateView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pickupDateTextView">
+
+                    <TextView
+                        android:id="@+id/pickupFromDateET"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:background="@android:color/transparent"
+                        android:focusedByDefault="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/from"
+                        android:imeOptions="flagNoExtractUi"
+                        android:importantForAutofill="no"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:nextFocusUp="@id/pickUpTimeViewET"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pickupToDateView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/unloadingMethodTextView"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/pickupFromDateView"
+
+                    app:layout_constraintTop_toBottomOf="@id/pickupDateTextView">
+
+                    <TextView
+                        android:id="@+id/pickupToDateET"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:background="@android:color/transparent"
+                        android:focusedByDefault="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/to"
+                        android:imeOptions="flagNoExtractUi"
+                        android:importantForAutofill="no"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:nextFocusUp="@id/pickUpTimeViewET"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/dropoffDateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/drop_off_date"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pickupToDateView"
+                    app:layout_goneMarginTop="@dimen/_12sdp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/dropoffFromDateView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/unloadingMethodTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    app:layout_constraintEnd_toStartOf="@id/dropoffToDateView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dropoffDateTextView">
+
+                    <TextView
+                        android:id="@+id/dropoffFromDateET"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:background="@android:color/transparent"
+                        android:focusedByDefault="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/from"
+                        android:imeOptions="flagNoExtractUi"
+                        android:importantForAutofill="no"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:nextFocusUp="@id/dropoffTimeViewET"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dropoffToDateView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/unloadingMethodTextView"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/dropoffFromDateView"
+
+                    app:layout_constraintTop_toBottomOf="@id/dropoffDateTextView">
+
+                    <TextView
+                        android:id="@+id/dropoffToDateET"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:background="@android:color/transparent"
+                        android:focusedByDefault="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/to"
+                        android:imeOptions="flagNoExtractUi"
+                        android:importantForAutofill="no"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/filterErrorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pickUpLocationSpinnewView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:textColor="@color/red_ff0000"
+                    android:textSize="@dimen/error_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dropoffToDateView" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/filterErrorTextView">
+
+                    <TextView
+                        android:id="@+id/applyTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/clearFiltersTextView"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+           android:foreground="?attr/selectableItemBackground"             android:layout_marginBottom="@dimen/_8sdp"
+                        android:background="@drawable/rounded_blue_button"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_9sdp"
+                        android:text="@string/apply"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_14sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/clearFiltersTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_25sdp"
+                        android:foreground="?attr/selectableItemBackground"          android:gravity="center"
+                        android:paddingTop="@dimen/_9sdp"
+                        android:paddingBottom="@dimen/_9sdp"
+                        android:text="@string/clear_filters"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_4a4a4a"
+                        android:background="@drawable/rounded_button_gray_border"
+                        android:fontFamily="sans-serif"
+                        android:textSize="@dimen/text_size_14sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/applyTextView" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

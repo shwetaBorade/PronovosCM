@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/invisibleView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/teamCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:foreground="?attr/selectableItemBackground"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_3sdp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/invisibleView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_7sdp">
+
+            <TextView
+                android:id="@+id/teamNameTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_c6cbd4"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/project_schedule"
+                android:textColor="@color/gray_6c7b8a"
+                android:textSize="@dimen/dashboard_text_size"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/teamView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teamNameTV">
+
+
+                <LinearLayout
+                    android:id="@+id/addressView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_7sdp"
+
+                    android:paddingRight="@dimen/_7sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/nameView">
+
+
+                    <TextView
+                        android:id="@+id/teamAddressTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_weight=".3"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Address:"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintEnd_toStartOf="@id/teamAddressTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/teamAddressTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_weight=".7"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/teamAddressTV"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/phoneView"
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:paddingRight="@dimen/_7sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/addressView">
+
+
+                    <TextView
+                        android:id="@+id/teamphoneTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_weight=".3"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Phone:"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintEnd_toStartOf="@id/teamphoneTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/teamphoneTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_weight=".7"
+                        android:autoLink="phone"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/gray_535a73"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:textColorHighlight="@color/gray_535a73"
+                        android:textColorLink="@color/colorPrimary"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/teamphoneTV"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nameView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_7sdp"
+
+                    android:paddingRight="@dimen/_7sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/teamCompanyTextV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_weight=".3"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Company:"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintEnd_toStartOf="@id/teamCompanyTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/teamCompanyTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_weight=".7"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/teamCompanyTextV"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/bottomView"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_7sdp"
+
+                    android:background="@color/gray_dedede"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/phoneView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/teamContactRecyclerView"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingRight="@dimen/_7sdp"
+                app:layout_constraintTop_toBottomOf="@id/teamView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

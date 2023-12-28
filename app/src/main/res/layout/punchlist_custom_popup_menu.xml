@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/punchlist_popup_menu_padding">
+
+
+    <RelativeLayout
+        android:id="@+id/popupView"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow"
+        android:padding="@dimen/_15sdp">
+
+        <TextView
+            android:id="@+id/editTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/edit"
+            android:textColor="@color/gray_4a4a4a"
+            android:textSize="@dimen/dashboard_text_size" />
+
+        <View
+            android:id="@+id/dividerMenu"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/editTextView"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/option_menu_divider" />
+
+        <TextView
+            android:id="@+id/deleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dividerMenu"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="sans-serif"
+            android:text="@string/delete"
+            android:textColor="@color/gray_4a4a4a"
+            android:textSize="@dimen/dashboard_text_size" />
+    </RelativeLayout>
+</RelativeLayout>

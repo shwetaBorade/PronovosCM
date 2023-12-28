@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_fafafa">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/infoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_9sdp"
+            android:layout_marginRight="@dimen/_9sdp"
+            android:background="@color/white">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_15sdp">
+
+
+                <TextView
+                    android:id="@+id/truckSizeView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/truck_size"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/truckSizeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/truckSizeView" />
+
+
+                <TextView
+                    android:id="@+id/freightLineView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/freight_line"
+                    android:textColor="@color/gray_535a73"
+                    android:textColorHint="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/truckSizeTextView" />
+
+                <TextView
+                    android:id="@+id/freightLineTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/freightLineView" />
+
+
+                <TextView
+                    android:id="@+id/commentsView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/comments"
+                    android:textColor="@color/gray_535a73"
+                    android:textColorHint="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/freightLineTextView" />
+
+                <TextView
+                    android:id="@+id/commentsTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/commentsView" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@color/option_menu_divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/commentsTextView" />
+
+
+                <TextView
+                    android:id="@+id/actualPickUpView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/actual_pick_up_time"
+                    android:textColor="@color/gray_535a73"
+                    android:textColorHint="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view1" />
+
+                <TextView
+                    android:id="@+id/loadTimeView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/load_time"
+                    android:textColor="@color/gray_535a73"
+                    android:textColorHint="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/arrivalTimeTextView" />
+
+                <TextView
+                    android:id="@+id/loadTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/loadTimeView" />
+
+                <TextView
+                    android:id="@+id/departureTimeView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/departure_time"
+                    android:textColor="@color/gray_535a73"
+                    android:textColorHint="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/loadTimeTextView" />
+
+                <TextView
+                    android:id="@+id/departureTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/departureTimeView" />
+
+                <TextView
+                    android:id="@+id/arrivalTimeView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/arrival_time"
+                    android:textColor="@color/gray_535a73"
+                    android:textColorHint="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/actualPickUpView" />
+
+                <TextView
+                    android:id="@+id/arrivalTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/arrivalTimeView" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@color/option_menu_divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/departureTimeTextView" />
+
+
+                <TextView
+                    android:id="@+id/dropOffActualPickUpView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/actual_drop_off_time"
+                    android:textColor="@color/gray_535a73"
+                    android:textColorHint="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view2" />
+
+                <TextView
+                    android:id="@+id/dropOffLoadTimeView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/load_time"
+                    android:textColor="@color/gray_535a73"
+                    android:textColorHint="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dropOffArrivalTimeTextView" />
+
+                <TextView
+                    android:id="@+id/dropOffLoadTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dropOffLoadTimeView" />
+
+                <TextView
+                    android:id="@+id/dropOffDepartureTimeView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/departure_time"
+                    android:textColor="@color/gray_535a73"
+                    android:textColorHint="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dropOffLoadTimeTextView" />
+
+                <TextView
+                    android:id="@+id/dropOffDepartureTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dropOffDepartureTimeView" />
+
+                <TextView
+                    android:id="@+id/dropOffArrivalTimeView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/drop_off_time"
+                    android:textColor="@color/gray_535a73"
+                    android:textColorHint="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dropOffActualPickUpView" />
+
+                <TextView
+                    android:id="@+id/dropOffArrivalTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dropOffArrivalTimeView" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@color/option_menu_divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dropOffDepartureTimeTextView" />
+
+
+                <TextView
+                    android:id="@+id/createdByView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/created_by"
+                    android:textColor="@color/gray_535a73"
+                    android:textColorHint="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view3" />
+
+                <TextView
+                    android:id="@+id/createdByTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:fontFamily="sans-serif"
+                    android:imeOptions="flagNoExtractUi"
+                    android:importantForAutofill="no"
+
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/createdByView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

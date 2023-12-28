@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginVertical="@dimen/_3sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/submittalsItemCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_10sdp">
+
+        <LinearLayout
+            android:id="@+id/topNameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/submittalsNumberTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size" />
+
+            <TextView
+                android:id="@+id/submittalsDash"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".04"
+                android:fontFamily="sans-serif-medium"
+                android:text="-"
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewSubmittalsTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size"
+                tools:text="RFI title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/assignToContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewDateSubmitLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/date_submitted"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <TextView
+                    android:id="@+id/textViewDateSubmitValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="2sp"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    android:textStyle="normal"
+                    tools:text="52" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewAssignLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/rfi_assigned_to"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_3sdp">
+
+                    <TextView
+                        android:id="@+id/textViewAssginTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="2sp"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:textStyle="normal"
+                        tools:text="Mike" />
+
+                    <TextView
+                        android:id="@+id/assignedCountId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_circle_blue"
+                        android:padding="@dimen/_5sdp"
+                        android:text="+1"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewStatusLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/status"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp">
+
+                    <ImageView
+                        android:id="@+id/ivStatus"
+                        android:layout_width="@dimen/_11sdp"
+                        android:layout_height="@dimen/_11sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_circle_status" />
+
+                    <TextView
+                        android:id="@+id/textViewStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:lineSpacingExtra="2sp"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size"
+                        tools:text="52" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/date_due"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+
+                <TextView
+                    android:id="@+id/textViewDateDue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="2sp"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    android:textStyle="normal"
+                    tools:text="52" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

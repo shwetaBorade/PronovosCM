@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pronovoscm">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- <uses-feature android:name="android.hardware.camera.autofocus"/> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Required only if your app needs to access images or photos
+         that other apps created. -->
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!--    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />-->
+<!--    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />-->
+
+    <uses-permission
+        android:name="android.permission.MANAGE_MEDIA"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".PronovosApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.issue_tracking.AddIssueActivity"
+            android:exported="false" />
+        <activity android:name=".activity.issue_tracking.ViewIssueDetailActivity" />
+        <activity android:name=".activity.RfiDetailActivity" />
+        <activity android:name=".activity.RfiListActivity" />
+        <activity android:name=".activity.SubmittalsListActivity" />
+        <activity android:name=".activity.SubmittalDetailActivity" /> <!-- <activity android:name=".activity.ProjectDocumentFileViewActivity" /> -->
+        <activity android:name=".activity.ProjectDocumentsFilesActivity" />
+        <activity
+            android:name=".activity.ProjectDocumentsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".PronovosCameraActivity"> -->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".TakeRecieptPicture"> -->
+        <activity
+            android:name=".activity.ProjectsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.ProjectOptionsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale" />
+        <activity
+            android:name=".activity.ProjectAlbumActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".activity.AlbumsPhotoActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".activity.FullPhotoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".activity.ForgetPasswordActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PhotoDetailActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.PronovosCameraActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.PhotoEditActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.FieldPaperWorkActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.DailyReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" /> <!-- <activity -->
+        <!-- android:name=".activity.PunchlistPhotoEditFragment" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" /> -->
+        <activity
+            android:name=".activity.DailyWeatherReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.DailyCrewReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.DailyWorkDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.DailyWorkImpactActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.DrawingListTabActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.DrawingPDFActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/CustomAppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ProjectDrawingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.PunchListActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|screenSize" />
+        <activity
+            android:name=".activity.EquipmentActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|screenSize" />
+        <activity
+            android:name=".activity.InventoryActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|screenSize" />
+        <activity
+            android:name=".activity.TransferOverviewActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|screenSize" />
+        <activity
+            android:name=".activity.InventorySubcategoryActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|screenSize" />
+        <activity
+            android:name=".activity.EquipmentDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|screenSize" />
+        <activity
+            android:name=".activity.DailyEmailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.TransferOverviewDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.CreateTransfersActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.CreateTransferEquipmentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ProjectFormActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!--
+                <provider
+                    android:name="android.support.v4.status.FileProvider"
+                    android:authorities="${applicationId}.provider"
+                    android:exported="false"
+                    android:grantUriPermissions="true">
+                    <meta-data
+                        android:name="android.support.FILE_PROVIDER_PATHS"
+                        android:resource="@xml/provider_paths" />
+                </provider>
+        -->
+        <activity
+            android:name=".activity.CreateTransferDisputeMessage"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.TransferLogActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.TransferLogFilterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.TransferLogDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".galleryimagepicker.GalleryPickerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ProjectOverviewDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ProjectFormUserActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ProjectFormDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.FormEmailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <meta-data
+            android:name="pdftron_license_key"
+            android:value="${pdftronLicenseKey}" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="6e6bbe232ad85de60d18b357e1ad1e7b4a1497d9" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver
+            android:name=".broadcastreceivers.NetworkStateReceiver"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- Intent filters for broadcast receiver to receive change in network state -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.pdftron.pdf.controls.DocumentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:theme="@style/PDFTronAppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".pdftron.PDFActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activity.issue_tracking.IssueTrackingListActivity" />
+    </application>
+
+</manifest>

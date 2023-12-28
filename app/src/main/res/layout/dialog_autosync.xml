@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/syncOptionCardView"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/_4sdp"
+    app:cardElevation="@dimen/_3sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxHeight="@dimen/_400sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Sync Options"
+            android:layout_margin="@dimen/_3sdp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_14sdp" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/title"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:background="@color/gray_cccccc" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/syncAllCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_3sdp">
+
+            <Switch
+                android:id="@+id/syncAllSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:checked="true"
+                android:minWidth="@dimen/_280sdp"
+                android:padding="@dimen/_14sdp"
+                android:text="Sync All Drawings in Folder"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_15sdp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/syncAllCardView"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_3sdp">
+
+            <Switch
+                android:id="@+id/previewSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:checked="true"
+                android:minWidth="@dimen/_280sdp"
+                android:padding="@dimen/_14sdp"
+                android:text="Auto Sync Updates"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_15sdp" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

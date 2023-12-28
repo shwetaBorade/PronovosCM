@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.pronovoscm.utils.DateFormatter" />
+
+        <variable
+            name="issueTracking"
+            type="com.pronovoscm.model.view.IssueListItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/offlineTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_12577b"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/offline_mode"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="@id/toolbar"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/offlineTextView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".activity.issue_tracking.ViewIssueDetailActivity">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvLabelInformation"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:text="@string/information"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvLabelIssueNumber"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:text="@string/issue_number"
+                            app:layout_constraintEnd_toEndOf="@+id/tvLabelInformation"
+                            app:layout_constraintStart_toStartOf="@+id/tvLabelInformation"
+                            app:layout_constraintTop_toBottomOf="@+id/tvLabelInformation" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etIssueNumber"
+                            style="@style/edit_text_with_font"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:background="@drawable/disable_rounded_gray_border"
+                            android:enabled="false"
+                            android:focusedByDefault="false"
+                            android:inputType="text"
+                            android:nextFocusUp="@+id/etIssueTitle"
+                            android:text="@={issueTracking.issueNumber}"
+                            app:layout_constraintEnd_toEndOf="@id/tvLabelIssueNumber"
+                            app:layout_constraintStart_toStartOf="@id/tvLabelIssueNumber"
+                            app:layout_constraintTop_toBottomOf="@id/tvLabelIssueNumber"
+                            tools:text="New" />
+
+                        <TextView
+                            android:id="@+id/tvLabelTitle"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/title"
+                            app:layout_constraintEnd_toEndOf="@+id/etIssueNumber"
+                            app:layout_constraintStart_toStartOf="@+id/etIssueNumber"
+                            app:layout_constraintTop_toBottomOf="@+id/etIssueNumber" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilIssueTitle"
+                            style="@style/text_input_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            app:hintEnabled="false"
+                            app:layout_constraintEnd_toEndOf="@id/tvLabelTitle"
+                            app:layout_constraintStart_toStartOf="@id/tvLabelTitle"
+                            app:layout_constraintTop_toBottomOf="@id/tvLabelTitle">
+
+                            <EditText
+                                android:id="@+id/etIssueTitle"
+                                style="@style/edit_text_with_font"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/enter_title"
+                                android:inputType="text"
+                                android:maxLength="100"
+                                android:text="@={issueTracking.title}" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/tvLabelStatus"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/status"
+                            app:layout_constraintEnd_toEndOf="@+id/tilIssueTitle"
+                            app:layout_constraintStart_toStartOf="@+id/tilIssueTitle"
+                            app:layout_constraintTop_toBottomOf="@+id/tilIssueTitle" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etIssueStatus"
+                            style="@style/edit_text_with_font"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:inputType="text"
+                            android:text='@{issueTracking.resolvedStatus ? "Resolved" : "Open"}'
+                            app:layout_constraintEnd_toEndOf="@id/tvLabelStatus"
+                            app:layout_constraintStart_toStartOf="@id/tvLabelStatus"
+                            app:layout_constraintTop_toBottomOf="@id/tvLabelStatus" />
+
+                        <TextView
+                            android:id="@+id/tvLabelCreated"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/created"
+                            app:layout_constraintEnd_toEndOf="@+id/etIssueStatus"
+                            app:layout_constraintStart_toStartOf="@+id/etIssueStatus"
+                            app:layout_constraintTop_toBottomOf="@+id/etIssueStatus" />
+
+                        <TextView
+                            android:id="@+id/tvCreated"
+                            style="@style/textViewLabelsValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:clickable="true"
+                            android:enabled="false"
+                            android:text="@{issueTracking.dateCreated != null ? DateFormatter.getDisplayDate(issueTracking.dateCreated, DateFormatter.SERVICE_DATE_FORMAT, DateFormatter.DATE_FORMAT_MMDDYYYY) : null}"
+                            android:textColor="@color/tools_gray"
+                            app:layout_constraintEnd_toEndOf="@+id/tvLabelCreated"
+                            app:layout_constraintStart_toStartOf="@+id/tvLabelCreated"
+                            app:layout_constraintTop_toBottomOf="@+id/tvLabelCreated"
+                            tools:text="03/19/2021" />
+
+                        <TextView
+                            android:id="@+id/tvLabelCreatedBy"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Created By"
+                            app:layout_constraintEnd_toEndOf="@id/tvCreated"
+                            app:layout_constraintStart_toStartOf="@id/tvCreated"
+                            app:layout_constraintTop_toBottomOf="@id/tvCreated" />
+
+                        <TextView
+                            android:id="@+id/tvCreatedBy"
+                            style="@style/textViewLabelsValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:clickable="true"
+                            android:enabled="false"
+                            android:text="@={issueTracking.createdByName}"
+                            android:textColor="@color/tools_gray"
+                            app:layout_constraintEnd_toEndOf="@id/tvLabelCreatedBy"
+                            app:layout_constraintStart_toStartOf="@id/tvLabelCreatedBy"
+                            app:layout_constraintTop_toBottomOf="@id/tvLabelCreatedBy" />
+
+                        <TextView
+                            android:id="@+id/tvLabelNeededBy"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Needed By"
+                            app:layout_constraintEnd_toEndOf="@id/tvCreatedBy"
+                            app:layout_constraintStart_toStartOf="@id/tvCreatedBy"
+                            app:layout_constraintTop_toBottomOf="@id/tvCreatedBy" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            app:layout_constraintEnd_toEndOf="@id/tvLabelNeededBy"
+                            app:layout_constraintStart_toStartOf="@id/tvLabelNeededBy"
+                            app:layout_constraintTop_toBottomOf="@id/tvLabelNeededBy">
+
+                            <TextView
+                                android:id="@+id/tvAddNeededBy"
+                                style="@style/edit_text_with_font"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:hint='Select Date'
+                                android:text="@{issueTracking.neededBy != null ? DateFormatter.getDisplayDate(issueTracking.neededBy, DateFormatter.SERVICE_DATE_FORMAT, DateFormatter.DATE_FORMAT_MMDDYYYY) : null}" />
+
+                            <TextView
+                                android:id="@+id/tvAddNeededByTime"
+                                style="@style/edit_text_with_font"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                android:layout_weight="0.5"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:hint='Select Time'
+                                android:textAllCaps="true"
+                                android:text="@{issueTracking.getNeedByTime()}" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/tvAddNeededByTimezone"
+                            style="@style/edit_text_with_font"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:hint='Select Timezone'
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:text="@{issueTracking.neededByTimeZone}"
+                            app:layout_constraintEnd_toEndOf="@id/linearLayout"
+                            app:layout_constraintStart_toStartOf="@id/linearLayout"
+                            app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+                        <TextView
+                            android:id="@+id/tvLabelAssignedTo"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Assigned To"
+                            app:layout_constraintEnd_toEndOf="@id/tvAddNeededByTimezone"
+                            app:layout_constraintStart_toStartOf="@id/tvAddNeededByTimezone"
+                            app:layout_constraintTop_toBottomOf="@id/tvAddNeededByTimezone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlAddAssignee"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_gray_border"
+                            android:imeOptions="flagNoExtractUi"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="@id/tvLabelAssignedTo"
+                            app:layout_constraintStart_toStartOf="@id/tvLabelAssignedTo"
+                            app:layout_constraintTop_toBottomOf="@id/tvLabelAssignedTo">
+
+                            <com.pronovoscm.materialchips.ChipsInput
+                                android:id="@+id/add_assignee_chips_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_marginBottom="@dimen/_1sdp"
+                                android:clickable="false"
+                                android:imeOptions="flagNoExtractUi"
+                                android:paddingLeft="@dimen/autocomplete_padding"
+                                app:chip_deleteIconColor="#FFFFFF"
+                                app:chip_detailed_deleteIconColor="@color/white"
+                                app:chip_detailed_textColor="#FFFFFF"
+                                app:deletable="true"
+                                app:hasAvatarIcon="false"
+                                app:hint="@string/please_type_here"
+                                app:hintColor="@color/gray_747e8d"
+                                app:labelColor="#FFFFFF"
+                                app:maxRows="4"
+                                app:textColor="@color/gray_747e8d" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvLabelResolved"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/resolved"
+                            app:layout_constraintEnd_toEndOf="@id/rlAddAssignee"
+                            app:layout_constraintStart_toStartOf="@id/rlAddAssignee"
+                            app:layout_constraintTop_toBottomOf="@id/rlAddAssignee" />
+
+                        <TextView
+                            android:id="@+id/tvResolved"
+                            style="@style/textViewLabelsValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:enabled="false"
+                            android:text='@{issueTracking.resolvedStatus ? "Yes":"No"}'
+                            android:textColor="@color/tools_gray"
+                            app:layout_constraintEnd_toEndOf="@+id/tvLabelResolved"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tvLabelResolved"
+                            app:layout_constraintTop_toBottomOf="@+id/tvLabelResolved"
+                            tools:text="@string/no" />
+
+                        <TextView
+                            android:id="@+id/tvLabelDescription"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/description"
+                            app:layout_constraintEnd_toEndOf="@+id/tvResolved"
+                            app:layout_constraintStart_toStartOf="@+id/tvResolved"
+                            app:layout_constraintTop_toBottomOf="@+id/tvResolved" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilIssueDescription"
+                            style="@style/text_input_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            app:hintEnabled="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/tvLabelDescription"
+                            app:layout_constraintStart_toStartOf="@id/tvLabelDescription"
+                            app:layout_constraintTop_toBottomOf="@id/tvLabelDescription"
+                            app:layout_constraintVertical_bias="0.0">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etIssueDescription"
+                                style="@style/edit_text_with_font"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="top"
+                                android:hint="@string/enter_description"
+                                android:inputType="textMultiLine"
+                                android:maxLength="300"
+                                android:maxLines="5"
+                                android:minLines="3"
+                                android:text="@={issueTracking.description}"
+                                tools:text="test" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvImpactAndRootCause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="@id/cvInformation"
+                    app:layout_constraintStart_toStartOf="@id/cvInformation"
+                    app:layout_constraintTop_toBottomOf="@id/cvInformation">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvLabelImpactAndRootCause"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:text="@string/impact_and_root_cause"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvLabelImpact"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/impact"
+                            app:layout_constraintEnd_toEndOf="@+id/tvLabelImpactAndRootCause"
+                            app:layout_constraintStart_toStartOf="@+id/tvLabelImpactAndRootCause"
+                            app:layout_constraintTop_toBottomOf="@+id/tvLabelImpactAndRootCause" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvImpacts"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:layout_constraintBottom_toTopOf="@+id/tvLabelRootCause"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tvLabelImpact"
+                            app:layout_constraintTop_toBottomOf="@+id/tvLabelImpact"
+                            app:spanCount="@integer/impact_and_root_cause_grid_size"
+                            tools:itemCount="10"
+                            tools:listitem="@layout/item_impact_and_root_cause" />
+
+                        <TextView
+                            android:id="@+id/tvLabelRootCause"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/root_cause"
+                            app:layout_constraintEnd_toEndOf="@+id/tvLabelImpactAndRootCause"
+                            app:layout_constraintStart_toStartOf="@+id/tvLabelImpactAndRootCause"
+                            app:layout_constraintTop_toBottomOf="@+id/rvImpacts" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvRootCause"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tvLabelRootCause"
+                            app:layout_constraintTop_toBottomOf="@+id/tvLabelRootCause"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:spanCount="@integer/impact_and_root_cause_grid_size"
+                            tools:itemCount="10"
+                            tools:listitem="@layout/item_impact_and_root_cause" />
+
+                        <TextView
+                            android:id="@+id/tvLabelRootCauseError"
+                            style="@style/textViewLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/please_select_the_primary_reason_for_the_issue"
+                            android:textColor="@color/red"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="@+id/rvRootCause"
+                            app:layout_constraintStart_toStartOf="@+id/rvRootCause"
+                            app:layout_constraintTop_toBottomOf="@+id/rvRootCause" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCustomFields"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@+id/cvImpactAndRootCause"
+                    app:layout_constraintStart_toStartOf="@+id/cvImpactAndRootCause"
+                    app:layout_constraintTop_toBottomOf="@id/cvImpactAndRootCause" />
+
+                <TextView
+                    android:id="@+id/tvLabelItemBreakdown"
+                    style="@style/textViewLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/item_breakdown"
+                    app:layout_constraintStart_toStartOf="@+id/cvImpactAndRootCause"
+                    app:layout_constraintTop_toBottomOf="@+id/rvCustomFields" />
+
+                <TextView
+                    android:id="@+id/tvLabelItemBreakdownCount"
+                    style="@style/textViewLabel"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:background="@drawable/rounded_light_gray"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintStart_toEndOf="@+id/tvLabelItemBreakdown"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelItemBreakdown"
+                    tools:text="9" />
+
+                <ImageView
+                    android:id="@+id/ivAddBreakdown"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/rounded_grey_button"
+                    android:contentDescription="@string/add_breakdown"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_add_white_24dp"
+                    app:layout_constraintEnd_toEndOf="@+id/cvImpactAndRootCause"
+                    app:layout_constraintTop_toTopOf="@+id/tvLabelItemBreakdownCount" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLabelItemBreakdown"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@+id/cvImpactAndRootCause"
+                    app:layout_constraintStart_toStartOf="@+id/cvImpactAndRootCause"
+                    app:layout_constraintTop_toBottomOf="@id/tvLabelItemBreakdown" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/btn_blue"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/rvLabelItemBreakdown"
+                    app:layout_constraintStart_toStartOf="@+id/rvLabelItemBreakdown"
+                    app:layout_constraintTop_toBottomOf="@id/rvLabelItemBreakdown" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

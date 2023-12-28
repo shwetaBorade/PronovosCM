@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart= "@dimen/_8sdp"
+            android:paddingEnd="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tvItemHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Header"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTextInput"
+                style="@style/text_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:hintEnabled="false"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/tvItemHeader"
+                app:layout_constraintStart_toStartOf="@id/tvItemHeader"
+                app:layout_constraintTop_toBottomOf="@id/tvItemHeader">
+
+                <EditText
+                    android:id="@+id/etTextInput"
+                    style="@style/edit_text_with_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:inputType="text"
+                    android:hint="text input"
+                    android:maxLength="300" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlDateInput"
+                    style="@style/text_input_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:hintEnabled="false"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/tvItemHeader"
+                    app:layout_constraintStart_toStartOf="@id/tvItemHeader"
+                    app:layout_constraintTop_toBottomOf="@id/tvItemHeader">
+
+                    <TextView
+                        android:id="@+id/tvSelectedDate"
+                        style="@style/edit_text_with_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:inputType="number"
+                        android:hint="@string/select_date"
+                        android:maxLength="300" />
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRadioInput"
+                style="@style/text_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:hintEnabled="false"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/tvItemHeader"
+                app:layout_constraintStart_toStartOf="@id/tvItemHeader"
+                app:layout_constraintTop_toBottomOf="@id/tvItemHeader">
+
+                <TextView
+                    android:id="@+id/tvSelectRadioOption"
+                    style="@style/edit_text_with_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:hint="@string/please_select_location"
+                    android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"/>
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

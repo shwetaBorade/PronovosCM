@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/offlineTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_12577b"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/offline_mode"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_10sdp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/emailScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".activity.DailyEmailActivity"
+        tools:showIn="@layout/activity_daily_email">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/toLinearView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingRight="@dimen/_17sdp"
+                    android:textColor="@color/gray_4a4a4a"
+                    android:textSize="@dimen/text_size_14sdp" />
+
+                <TextView
+                    android:id="@+id/toView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_28sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:lineSpacingExtra="2sp"
+                    android:text="@string/to"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/logoImageView" />
+
+                <RelativeLayout
+                    android:id="@+id/albumViewShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_28sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_28sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    android:imeOptions="flagNoExtractUi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/album">
+
+
+                    <com.pronovoscm.materialchips.ChipsInput
+                        android:id="@+id/chips_input_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
+                        android:imeOptions="flagNoExtractUi"
+                        android:paddingLeft="@dimen/autocomplete_padding"
+                        android:visibility="invisible"
+                        app:chip_deleteIconColor="#FFFFFF"
+                        app:chip_detailed_deleteIconColor="@color/white"
+                        app:chip_detailed_textColor="#FFFFFF"
+                        app:deletable="true"
+                        app:hasAvatarIcon="false"
+                        app:hint="@string/please_type_here"
+                        app:hintColor="@color/gray_747e8d"
+                        app:labelColor="#FFFFFF"
+                        app:maxRows="1"
+                        app:textColor="@color/gray_747e8d" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/toAutoTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@null"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/please_type_here"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:padding="@dimen/_7sdp"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:visibility="visible" />
+
+                    <com.pronovoscm.utils.library.AutoLabelUI
+                        android:id="@+id/keywordAutoLabelToUI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/toTextView"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/please_type_here"
+                        android:lines="1"
+                        android:padding="@dimen/_7sdp"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/assigneErrorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toLinearView"
+                android:layout_marginLeft="@dimen/_28sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="left"
+
+                android:textColor="@color/red_ff0000"
+                android:textSize="@dimen/error_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toLinearView" />
+
+            <LinearLayout
+                android:id="@+id/ccLinearView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/assigneErrorTextView"
+                android:orientation="vertical"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/assigneErrorTextView">
+
+
+                <TextView
+                    android:id="@+id/ccTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_28sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:lineSpacingExtra="2sp"
+                    android:text="@string/cc"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/logoImageView" />
+
+                <RelativeLayout
+                    android:id="@+id/ccRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_28sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_28sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    android:imeOptions="flagNoExtractUi"
+                    android:visibility="visible">
+
+                    <com.pronovoscm.materialchips.ChipsInput
+                        android:id="@+id/chips_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
+                        android:imeOptions="flagNoExtractUi"
+                        android:paddingLeft="@dimen/autocomplete_padding"
+                        app:chip_deleteIconColor="#FFFFFF"
+                        app:chip_detailed_deleteIconColor="@color/white"
+                        app:chip_detailed_textColor="#FFFFFF"
+                        app:deletable="true"
+                        app:hasAvatarIcon="false"
+                        app:hint="@string/please_type_here"
+                        app:hintColor="@color/gray_747e8d"
+                        app:labelColor="#FFFFFF"
+                        app:maxRows="4"
+                        app:textColor="@color/gray_747e8d" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/allKeyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_28sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_28sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/album">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ccAutoTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/please_select"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:padding="@dimen/_7sdp"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:visibility="visible" />
+
+                    <com.pronovoscm.utils.library.AutoLabelUI
+                        android:id="@+id/keywordAutoLabelUI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:layout_toLeftOf="@id/expandImageView"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/ccHintTextView"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:padding="@dimen/_7sdp"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/text_size_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/expandImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/ic_expand_more" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ccLinearView"
+                android:layout_alignParentBottom="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/sendTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/cancelTextView"
+                    android:layout_marginLeft="@dimen/_28sdp"
+                    android:layout_marginRight="@dimen/_28sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="@drawable/rounded_blue_button"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_9sdp"
+                    android:text="@string/send"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboard_text_size"
+                    app:layout_constraintBottom_toTopOf="@id/cancelTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/cancelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/_28sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginRight="@dimen/_28sdp"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:background="@drawable/rounded_button_gray_border"
+                    android:fontFamily="sans-serif"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_9sdp"
+                    android:paddingBottom="@dimen/_9sdp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray_4a4a4a"
+                    android:textSize="@dimen/dashboard_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/invisibleView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/invisibleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

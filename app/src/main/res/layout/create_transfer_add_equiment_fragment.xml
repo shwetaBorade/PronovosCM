@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_fafafa">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/_9sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_9sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/equipmentContainerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/bottom_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/descriptionTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/description"
+                        android:textColor="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/conditionPickUpTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="*"
+                        android:textColor="@color/red_d0021b"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toEndOf="@id/descriptionTextView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/enterDescriptionView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:background="@drawable/rounded_gray_border"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/descriptionTextView">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/enterDescriptionViewET"
+                            style="@style/BasicEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_9sdp"
+                            android:layout_marginRight="@dimen/_9sdp"
+                            android:background="@android:color/transparent"
+                            android:completionThreshold="1"
+                            android:focusedByDefault="false"
+                            android:longClickable="false"
+                            android:fontFamily="sans-serif"
+                            android:hint="@string/please_enter_description"
+                            android:imeOptions="flagNoExtractUi"
+                            android:importantForAutofill="no"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:nextFocusUp="@id/pickUpTimeViewET"
+                            android:paddingTop="@dimen/_11sdp"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_747e8d"
+                            android:textColorHint="@color/gray_747e8d"
+                            android:textSize="@dimen/dashboard_text_size"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/nameErrorTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:gravity="left"
+                        android:textColor="@color/red_ff0000"
+                        android:textSize="@dimen/error_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/enterDescriptionView" />
+
+                    <TextView
+                        android:id="@+id/lookUpEquipmentTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/weather_ic_30sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginRight="@dimen/weather_ic_30sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:background="@drawable/rounded_blue_button"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_9sdp"
+                        android:text="@string/lookup_equipment"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_14sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/nameErrorTextView" />
+
+                    <TextView
+                        android:id="@+id/trackingIdTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Tracking #"
+                        android:textColor="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/lookUpEquipmentTextView" />
+
+                    <TextView
+                        android:id="@+id/trackingIDConditionTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="*"
+                        android:textColor="@color/red_d0021b"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@id/trackingIdTextView"
+                        app:layout_constraintTop_toBottomOf="@id/lookUpEquipmentTextView" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/enterTrackingView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:background="@drawable/rounded_gray_border"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/trackingIdTextView">
+
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/trackingIdSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@color/gray_747e8d"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/trackingErrorTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:gravity="left"
+                        android:textColor="@color/red_ff0000"
+                        android:textSize="@dimen/error_text_size"
+                        app:layout_constraintEnd_toEndOf="@id/enterTrackingView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/enterTrackingView" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/statusView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/trackingErrorTextView">
+
+                        <RelativeLayout
+                            android:id="@+id/statusContainerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/statusTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="@string/status"
+                                android:textColor="@color/gray_747e8d"
+                                android:textSize="@dimen/dashboard_text_size" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/statusSpinnewView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_6sdp"
+                            android:background="@drawable/rounded_gray_border"
+                            app:layout_constraintEnd_toStartOf="@id/rentView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/statusContainerView">
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/statusSpinner"
+                                style="@style/BasicEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_4sdp"
+                                android:layout_marginTop="@dimen/_6sdp"
+                                android:layout_marginRight="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_6sdp"
+                                android:fontFamily="sans-serif"
+                                android:textColor="@color/gray_747e8d" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rentView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="@id/statusSpinnewView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/statusSpinnewView"
+                            app:layout_constraintTop_toTopOf="@id/statusSpinnewView">
+
+                            <CheckBox
+                                android:id="@+id/rentedCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/_2sdp"
+                                android:button="@drawable/custom_checkbox"
+                                android:fontFamily="sans-serif"
+                                android:paddingLeft="@dimen/_3sdp"
+                                android:textColor="@color/gray_535a73"
+                                android:textSize="@dimen/dashboard_text_size" />
+
+                            <TextView
+                                android:id="@+id/rentedTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/rentedCheckBox"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="@string/rented"
+                                android:textColor="@color/gray_747e8d"
+                                android:textSize="@dimen/dashboard_text_size" />
+
+
+                        </RelativeLayout>
+
+x
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/unitView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/statusView">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/quantityContainerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/quantityTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="@string/quantity"
+                                android:textColor="@color/gray_747e8d"
+                                android:textSize="@dimen/dashboard_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/quantityPickUpTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_toRightOf="@id/quantityTextView"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="*"
+                                android:textColor="@color/red_d0021b"
+                                android:textSize="@dimen/dashboard_text_size"
+
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/quantityTextView" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/newView"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/newInpuView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/_12sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <Switch
+                                        android:id="@+id/inputSwitch"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/inputTextView"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:fontFamily="sans-serif"
+                                        android:paddingLeft="@dimen/_3sdp"
+                                        android:textColor="@color/gray_535a73"
+                                        android:textSize="@dimen/dashboard_text_size" />
+
+                                    <TextView
+                                        android:id="@+id/inputTextView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginLeft="@dimen/_10sdp"
+                                        android:layout_marginRight="@dimen/_2sdp"
+                                        android:fontFamily="sans-serif"
+                                        android:lines="1"
+                                        android:text="@string/input_method"
+                                        android:textColor="#5a6871"
+                                        android:textSize="@dimen/dashboard_text_size" />
+
+
+                                </RelativeLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/quantityView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_6sdp"
+                            android:background="@drawable/rounded_gray_border"
+                            app:layout_constraintEnd_toStartOf="@id/inpuView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/quantityContainerView">
+
+                            <EditText
+                                android:id="@+id/quantityNumberET"
+                                style="@style/BasicEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_9sdp"
+                                android:hint="@string/enter_quantity"
+                                android:layout_marginRight="@dimen/_9sdp"
+                                android:background="@android:color/transparent"
+                                android:focusedByDefault="false"
+                                android:fontFamily="sans-serif"
+                                android:imeOptions="flagNoExtractUi"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:longClickable="false"
+                                android:lines="1"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:paddingTop="@dimen/_11sdp"
+                                android:paddingBottom="@dimen/_12sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/gray_747e8d"
+                                android:textColorHint="@color/gray_747e8d"
+                                android:textSize="@dimen/dashboard_text_size"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/quantityErrorTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/quantityView"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:gravity="left"
+                            android:textColor="@color/red_ff0000"
+                            android:textSize="@dimen/error_text_size"
+                            app:layout_constraintEnd_toEndOf="@id/quantityView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/quantityView" />
+
+                        <RelativeLayout
+                            android:id="@+id/inpuView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="@id/quantityContainerView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/quantityView">
+
+
+                            <TextView
+                                android:id="@+id/unTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Units"
+                                android:textColor="@color/gray_747e8d"
+                                android:textSize="@dimen/dashboard_text_size"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <!--  <Switch
+                                  android:id="@+id/inputSwitch"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_alignParentRight="true"
+                                  android:layout_centerVertical="true"
+                                  android:layout_marginTop="@dimen/_7sdp"
+                                  android:layout_marginRight="@dimen/_5sdp"
+                                  android:fontFamily="sans-serif"
+                                  android:paddingLeft="@dimen/_3sdp"
+                                  android:textColor="@color/gray_535a73"
+                                  android:textSize="@dimen/dashboard_text_size" />
+
+                              <TextView
+                                  android:id="@+id/inputTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/_8sdp"
+                                  android:layout_marginRight="@dimen/_2sdp"
+                                  android:layout_toLeftOf="@id/inputSwitch"
+                                  android:fontFamily="sans-serif"
+                                  android:lines="1"
+                                  android:text="@string/input_method"
+                                  android:textColor="#5a6871"
+                                  android:textSize="@dimen/dashboard_text_size" />
+  -->
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/unitsView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:background="@drawable/disable_rounded_gray_border"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/quantityView"
+
+                            app:layout_constraintTop_toBottomOf="@id/quantityContainerView">
+
+                            <EditText
+                                android:id="@+id/unitsNumberET"
+                                style="@style/BasicEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_9sdp"
+                                android:layout_marginRight="@dimen/_9sdp"
+                                android:background="@android:color/transparent"
+                                android:focusedByDefault="false"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/enter_units"
+                                android:longClickable="false"
+                                android:imeOptions="flagNoExtractUi"
+                                android:importantForAutofill="no"
+                                android:inputType="numberDecimal"
+                                android:lines="1"
+                                android:maxLength="7"
+                                android:maxLines="1"
+                                android:nextFocusUp="@id/pickUpTimeViewET"
+                                android:paddingTop="@dimen/_11sdp"
+                                android:paddingBottom="@dimen/_12sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/gray_747e8d"
+                                android:textColorHint="@color/gray_747e8d"
+                                android:textSize="@dimen/dashboard_text_size"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </RelativeLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/weightTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Weight (lbs)"
+                        android:textColor="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/unitView" />
+
+                    <TextView
+                        android:id="@+id/weightMainTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="*"
+                        android:textColor="@color/red_d0021b"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toEndOf="@id/weightTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/unitView" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/enterWeightView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:background="@drawable/rounded_gray_border"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/weightTextView">
+
+                        <EditText
+                            android:id="@+id/enterWeightViewET"
+                            style="@style/BasicEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_9sdp"
+                            android:layout_marginRight="@dimen/_9sdp"
+                            android:longClickable="false"
+                            android:background="@android:color/transparent"
+                            android:focusedByDefault="false"
+                            android:fontFamily="sans-serif"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal"
+                            android:lines="1"
+                            android:maxLength="7"
+                            android:maxLines="1"
+                            android:nextFocusUp="@id/pickUpTimeViewET"
+                            android:paddingTop="@dimen/_11sdp"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_747e8d"
+                            android:textColorHint="@color/gray_747e8d"
+                            android:textSize="@dimen/dashboard_text_size"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/weightErrorTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:gravity="left"
+                        android:textColor="@color/red_ff0000"
+                        android:textSize="@dimen/error_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/enterWeightView" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bottom_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/equipmentContainerView">
+
+                    <TextView
+                        android:id="@+id/addTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/cancelTextView"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:background="@drawable/rounded_blue_button"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:gravity="center"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_9sdp"
+                        android:text="@string/add"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_14sdp"
+                        app:layout_constraintBottom_toTopOf="@id/cancelTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cancelTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_9sdp"
+                        android:background="@drawable/rounded_button_gray_border"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_9sdp"
+                        android:paddingBottom="@dimen/_9sdp"
+                        android:text="@string/cancel"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_4a4a4a"
+                        android:textSize="@dimen/text_size_14sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

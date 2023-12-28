@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/amdp_done_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="horizontal"
+    android:background="@android:color/transparent"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="@dimen/ok_button_common_margin"
+    >
+
+    <TextView
+        android:id="@+id/amdp_ok"
+        android:gravity="center"
+
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/rounded_corner_ok_button_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ok_button_height"
+        android:textSize="@dimen/amdp_month_label_size"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/amdp_white"
+        android:text="@string/amdp_ok" />
+</LinearLayout>

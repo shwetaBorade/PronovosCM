@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.DailyWeatherReportActivity">
+
+    <include
+        android:id="@+id/toolbarView"
+        layout="@layout/toolbar_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/offlineTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_12577b"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/offline_mode"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_10sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolbarView" />
+
+    <TextView
+        android:id="@+id/dataOfflineTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/blue_12577b"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/this_daily_report_will_be_synced_once_online"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_10sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/offlineTextView" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray_fafafa"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dataOfflineTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:background="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dateView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/dayDateView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/dayTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/gray_4a4a4a"
+                        android:textSize="@dimen/text_size_14sdp" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/dateView">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingLeft="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_14sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+                    android:text="@string/weather_impact"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_12sdp">
+
+                    <RadioButton
+                        android:id="@+id/yesImpactRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="sans-serif"
+                        android:text="@string/yes"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/weather_title_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/noImpactRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/no"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/weather_title_text_size" />
+
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/conditionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingLeft="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_14sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+                    android:text="@string/conditions"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+
+                <RelativeLayout
+                    android:id="@+id/allKeyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/album">
+
+                    <com.pronovoscm.utils.library.AutoLabelUI
+                        android:id="@+id/keywordAutoLabelUI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:layout_toLeftOf="@id/expandImageView"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/weatherHintTextView"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/please_select"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textColor="@color/gray_747e8d"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:textSize="@dimen/dashboard_text_size" />
+
+                    <ImageView
+                        android:id="@+id/expandImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/ic_expand_more" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/notesTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingLeft="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_14sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+                    android:text="@string/notes"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+
+                <RelativeLayout
+                    android:id="@+id/noteView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/usernameTextView">
+
+                    <EditText
+                        android:id="@+id/noteEditText"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:background="@android:color/transparent"
+                        android:focusedByDefault="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/enter_notes"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textColor="@color/gray_747e8d"
+                        android:imeOptions="flagNoExtractUi"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:nextFocusUp="@id/passwordEditText"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/widgetView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingTop="@dimen/_14sdp"
+                        android:text="@string/weather_widget"
+                        android:textColor="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewHourlyForecast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/_12sdp"
+                        android:paddingRight="@dimen/_12sdp"
+                        android:background="@color/gray_fafafa"
+                        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:list="horizontal"
+                        tools:listitem="@layout/adapter_dark_sky_item" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/saveTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/rounded_blue_button"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_9sdp"
+                    android:text="@string/save"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_14sdp" />
+
+                <TextView
+                    android:id="@+id/cancelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:background="@drawable/rounded_button_gray_border"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_9sdp"
+                    android:paddingBottom="@dimen/_9sdp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray_4a4a4a"
+                    android:textSize="@dimen/text_size_14sdp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

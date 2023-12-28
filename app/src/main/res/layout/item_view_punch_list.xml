@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/projectCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_marginRight="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_3sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/itemView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/crew_title_text_size"
+                    tools:text="1" />
+
+                <ImageView
+                    android:id="@+id/syncingImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:background="@drawable/ic_refresh" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/punchListOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/_12sdp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="&#8942;"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/_6sdp"
+                android:paddingRight="@dimen/_6sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:textColor="@color/gray_808ba2"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/punchId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/_2sdp"
+                android:textColor="@color/tools_gray"
+                android:textSize="@dimen/dashboard_text_size"
+                tools:text="#001" />
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/punchId"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_toLeftOf="@+id/itemView"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:padding="@dimen/_2sdp"
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size"
+                tools:text="Description..." />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/locationLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_3sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:layout_below="@+id/textViewDescription"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Location"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/tools_gray"
+                    android:textSize="@dimen/dashboard_text_size"/>
+                <TextView
+                    android:id="@+id/punchListLocationId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="right"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    tools:text="2nd floor by stairwell 5"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/assignedToLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationLayoutId"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Assigned To"
+                    android:textColor="@color/tools_gray"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="0.6"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewCreatedBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/punchListOptions"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_toLeftOf="@+id/itemView"
+                        android:fontFamily="sans-serif-medium"
+                        android:padding="@dimen/_2sdp"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size"
+                        tools:text="@string/assigned_to" />
+
+                    <TextView
+                        android:id="@+id/assignedCountId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_circle_blue"
+                        android:padding="@dimen/_5sdp"
+                        android:text="+1"
+                        android:textColor="@color/white" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <LinearLayout
+                android:id="@+id/dueDateLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/assignedToLayoutId"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_toLeftOf="@+id/itemView"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/textViewDateLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_2sdp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/tools_gray"
+                    android:textSize="@dimen/dashboard_text_size"
+                    android:text="@string/date_due" />
+
+                <TextView
+                    android:id="@+id/textViewDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="right"
+                    android:layout_alignRight="@+id/punchListOptions"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_toLeftOf="@+id/itemView"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/gray_535a73"
+                    android:textSize="@dimen/dashboard_text_size"
+                    tools:text="04/30/2020" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textViewStatusLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/status"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size" />
+
+                    <TextView
+                        android:id="@+id/textViewStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="2sp"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:textStyle="normal"
+                        tools:text="52" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/actionButtonsLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dueDateLayoutId"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/markCompleteId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:background="@drawable/rounded_punch_list_button_blue_border"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/mark_complete"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue_color_picker" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/afterApprovedId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:drawableEnd="@drawable/ic_punchlist_approve"
+                    android:background="@drawable/rounded_punch_list_dark_green_button"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/_6sdp"
+                    android:text="@string/approved"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/approvedId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:background="@drawable/rounded_punch_list_button_green_border"
+                    android:drawableEnd="@drawable/ic_punchlist_approved"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/_6sdp"
+                    android:text="@string/approve"
+                    android:clickable="false"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green_color_picker"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/recompleteId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:background="@drawable/rounded_punch_list_button_red_border"
+                    android:drawableStart="@drawable/ic_punchlist_recomplete"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/recomplete"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red_color_picker"
+                    android:visibility="gone"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/rejectReasonBtnId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:background="@drawable/rounded_punch_list_button_red_border"
+                    android:drawableEnd="@drawable/ic_punchlist_reject"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/punlist_reject_btn_lable"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red_color_picker"
+                    android:visibility="gone"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

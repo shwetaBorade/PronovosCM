@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/projectCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_marginRight="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_3sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/rfiDateRequirementsLableTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/rfis_date_requirement"
+            android:textColor="@color/gray_535a73"
+            android:textSize="@dimen/dashboard_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rfiDateRequirementsLableTV"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tvRfidateSubmitedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/date_submitted"
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size" />
+
+            <TextView
+                android:id="@+id/tvRfiDateSubmittedValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="2sp"
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size"
+                android:textStyle="normal"
+                tools:text="52" />
+
+            <TextView
+                android:id="@+id/tvRfiReceivedDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/received_date"
+
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size" />
+
+            <TextView
+                android:id="@+id/tvRfiReceivedDateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="2sp"
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size"
+                android:textStyle="normal"
+                tools:text="52" />
+
+            <TextView
+                android:id="@+id/tvRfiResponseLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/response_requested"
+
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size" />
+
+            <TextView
+                android:id="@+id/tvRfiResponseReqValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="2sp"
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size"
+                android:textStyle="normal"
+                tools:text="7" />
+
+            <TextView
+                android:id="@+id/tvRfiResponseDateDUeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/date_due"
+
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size" />
+
+            <TextView
+                android:id="@+id/tvRfiResponseDateDueValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="2sp"
+                android:textColor="@color/gray_535a73"
+                android:textSize="@dimen/dashboard_text_size"
+                android:textStyle="normal"
+                tools:text="7" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

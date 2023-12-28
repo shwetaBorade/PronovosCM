@@ -1,0 +1,121 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../../../layout/custom_preview.xml" value="0.15437649880095924" />
+        <entry key="../../../../../../../root/Android/Sdk/platforms/android-31/data/res/layout-car/car_resolver_list.xml" value="0.35625" />
+        <entry key="PDFViewCtrlTools/res/drawable/controls_annotation_toolbar_bg1.xml" value="0.2255" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_area_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_arrow_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_callout_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_caret_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_circle_black_24dp.xml" value="0.19" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_cloud_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_distance_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_eraser_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_free_highlight_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_freehand_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_freetext_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_highlight_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_image_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_line_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_perimeter_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_poly_area_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_polygon_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_polyline_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_redact_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_signature_black_24dp.xml" value="0.2575" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_square_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_squiggly_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_stamp_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_sticky_note_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_strikeout_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_annotation_underline_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_attach_file_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_close_black_24dp.xml" value="0.253" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_date_range_24px.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_fill_and_sign_spacing_text.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_link_black_24dp.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_measurement_count.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_mic_black_24dp.xml" value="0.253" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_overflow_white_24dp.xml" value="0.253" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_pan_black_244dp.xml" value="0.263" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_pan_black_24dp.xml" value="0.2255" />
+        <entry key="PDFViewCtrlTools/res/drawable/ic_prepare_form.xml" value="0.264" />
+        <entry key="PDFViewCtrlTools/res/layout/controls_annotation_styles.xml" value="0.35625" />
+        <entry key="PDFViewCtrlTools/res/layout/controls_annotation_toolbar_collapsed_layout.xml" value="0.21510416666666668" />
+        <entry key="PDFViewCtrlTools/res/layout/controls_annotation_toolbar_layout.xml" value="0.21510416666666668" />
+        <entry key="PDFViewCtrlTools/res/layout/controls_edit_toolbar_collapsed_layout.xml" value="0.22644927536231885" />
+        <entry key="PDFViewCtrlTools/res/layout/controls_edit_toolbar_expanded_layout.xml" value="0.1838768115942029" />
+        <entry key="PDFViewCtrlTools/res/layout/controls_fragment_annotation_dialog.xml" value="0.1453125" />
+        <entry key="PDFViewCtrlTools/res/layout/dialog_annot_toolbar_overflow.xml" value="0.35625" />
+        <entry key="PDFViewCtrlTools/res/layout/dialog_reflow_annot_edit.xml" value="0.18177083333333333" />
+        <entry key="PDFViewCtrlTools/res/layout/fragment_rubber_stamp_dialog.xml" value="0.24114583333333334" />
+        <entry key="PDFViewCtrlTools/res/layout/tools_dialog_annotation_popup_text_input.xml" value="0.35625" />
+        <entry key="PDFViewCtrlTools/res/menu/annot_edit_text_markup.xml" value="0.35625" />
+        <entry key="PDFViewCtrlTools/res/menu/annot_free_hand.xml" value="0.17239583333333333" />
+        <entry key="PDFViewCtrlTools/res/menu/annot_free_text.xml" value="0.24375" />
+        <entry key="PDFViewCtrlTools/res/menu/annot_group.xml" value="0.24375" />
+        <entry key="PDFViewCtrlTools/res/menu/annot_ruler.xml" value="0.2859375" />
+        <entry key="PDFViewCtrlTools/res/menu/annot_simple_shape.xml" value="0.18177083333333333" />
+        <entry key="PDFViewCtrlTools/res/menu/annot_text_field.xml" value="0.18177083333333333" />
+        <entry key="PDFViewCtrlTools/res/menu/diff_viewer_addon.xml" value="0.24375" />
+        <entry key="PDFViewCtrlTools/res/menu/document_toolbar.xml" value="0.24375" />
+        <entry key="PDFViewCtrlTools/res/menu/text_select.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/drawable/ic_eraser.xml" value="0.264" />
+        <entry key="app/src/main/res/drawable/ic_rounded_fill_rectangle.xml" value="0.264" />
+        <entry key="app/src/main/res/drawable/white_black_rounded_view.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/activity_punch_list.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/drawing_pdf_view.xml" value="0.21784420289855072" />
+        <entry key="app/src/main/res/layout/item_view_punch_list.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/punch_list_detail_view.xml" value="0.19972826086956522" />
+        <entry key="app/src/main/res/layout/punchlist_custom_popup_menu.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/annot_simple_shape.xml" value="0.18177083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="NullableNotNullManager">
+    <option name="myDefaultNullable" value="org.jetbrains.annotations.Nullable" />
+    <option name="myDefaultNotNull" value="androidx.annotation.NonNull" />
+    <option name="myNullables">
+      <value>
+        <list size="13">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
+          <item index="2" class="java.lang.String" itemvalue="javax.annotation.CheckForNull" />
+          <item index="3" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
+          <item index="4" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />
+          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.Nullable" />
+          <item index="6" class="java.lang.String" itemvalue="android.annotation.Nullable" />
+          <item index="7" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNullable" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.Nullable" />
+          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
+          <item index="10" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
+          <item index="11" class="java.lang.String" itemvalue="com.android.annotations.Nullable" />
+          <item index="12" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.Nullable" />
+        </list>
+      </value>
+    </option>
+    <option name="myNotNulls">
+      <value>
+        <list size="12">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
+          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />
+          <item index="4" class="java.lang.String" itemvalue="androidx.annotation.NonNull" />
+          <item index="5" class="java.lang.String" itemvalue="android.annotation.NonNull" />
+          <item index="6" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNonNull" />
+          <item index="7" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.NonNull" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
+          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
+          <item index="10" class="java.lang.String" itemvalue="com.android.annotations.NonNull" />
+          <item index="11" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.NonNull" />
+        </list>
+      </value>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+</project>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/formMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProjectFormDetailActivity"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/offlineTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_12577b"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/offline_mode"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_10sdp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarView" />
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+         android:background="@color/form_bg_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/offlineTextView">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/formRibbonId"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/white"
+             android:elevation="@dimen/_3sdp"
+             android:layout_margin="@dimen/_10sdp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent">
+
+             <ImageView
+                 android:id="@+id/emailNotSentIconId"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginBottom="20dp"
+                 android:contentDescription="@string/form_ribbon_message"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:srcCompat="@drawable/ic_email_not_sent_status" />
+
+             <TextView
+                 android:id="@+id/ribbonTxtId"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/form_ribbon_message"
+                 app:layout_constraintBottom_toBottomOf="@+id/emailNotSentIconId"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintHorizontal_bias="0.095"
+                 app:layout_constraintStart_toEndOf="@+id/emailNotSentIconId"
+                 app:layout_constraintTop_toTopOf="@+id/emailNotSentIconId"
+                 app:layout_constraintVertical_bias="0.6" />
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         <WebView
+             android:id="@+id/opencontent"
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_marginBottom="@dimen/_3sdp"
+             app:layout_constraintBottom_toTopOf="@id/bottomButtons"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/formRibbonId" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/opencontent"
+            android:visibility="visible"
+            android:layout_marginBottom="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/saveSendTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/cancelTextView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:background="@drawable/selector_email_button"
+                android:fontFamily="@font/source_sans_pro"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:text="@string/save_as_send"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_14sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/saveTextViewRL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveTextViewRL"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:background="@drawable/selector_email_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cancelTextView"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/saveTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/source_sans_pro"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_9sdp"
+                    android:text="@string/save"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_14sdp" />
+
+                <ProgressBar
+                    android:id="@+id/mailOfflineProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/white"
+                    android:indeterminateTintMode="src_atop"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cancelTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/rounded_button_gray_border"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:text="@string/cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/gray_4a4a4a"
+                android:textSize="@dimen/text_size_14sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/saveTextViewRL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--
+                        <TextView
+                            android:id="@+id/saveExitTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/rounded_button_gray_border"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingBottom="@dimen/_9sdp"
+                            android:text="@string/save_and_exit"
+                            android:textAllCaps="true"
+                            android:textColor="@color/gray_4a4a4a"
+                            android:textSize="@dimen/text_size_14sdp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toStartOf="@id/saveTextView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--    </android.support.v4.widget.NestedScrollView>-->
+
+    <include
+        android:id="@+id/toolbarView"
+        layout="@layout/toolbar_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

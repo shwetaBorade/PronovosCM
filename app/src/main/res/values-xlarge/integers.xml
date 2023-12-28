@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="impact_and_root_cause_grid_size">6</integer>
+</resources>

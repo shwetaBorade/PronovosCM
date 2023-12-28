@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_fafafa"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_view" />
+
+
+    <TextView
+        android:id="@+id/offlineTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_12577b"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/offline_mode"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_10sdp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/noRecordTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/dashboard_text_size"
+            android:visibility="gone" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/submittalDetailView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp">
+
+            <LinearLayout
+                android:id="@+id/containerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_fafafa"
+                android:orientation="vertical">
+
+
+                <include
+                    android:id="@+id/statusContainer"
+                    layout="@layout/item_view_submittal_status_ribbon" />
+
+                <include
+                    android:id="@+id/detailContainer"
+                    layout="@layout/item_view_submittal_detail" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    >
+
+
+                    <TextView
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/responsible"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size" />
+
+
+                    <TextView
+                        android:id="@+id/tvDistributionCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_circle_gray"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/gray_535a73"
+                        android:textSize="@dimen/dashboard_text_size" />
+
+                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/currentStatusCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginVertical="@dimen/_3sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:padding="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1.3"
+                            android:id="@+id/tvCurrentStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/gray_535a73"
+                            android:textSize="@dimen/dashboard_text_size"
+                            android:text="@string/current_res_st" />
+
+                        <LinearLayout
+                            android:gravity="end"
+                            android:layout_weight="0.7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            >
+                            <ImageView
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/ivCurrentStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:src="@drawable/ic_circle_status"
+                                app:tint="@color/blue_color_picker" />
+                            <TextView
+                                android:id="@+id/tvCurrentStatusValue"
+                                android:layout_gravity="end"
+                                android:layout_width="wrap_content"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:textColor="@color/blue_color_picker"
+                                android:textSize="@dimen/dashboard_text_size"
+                                tools:text="@string/unavailable_offline_document" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/contactListRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:orientation="horizontal" />
+
+
+                <include
+                    android:id="@+id/cCContainer"
+                    layout="@layout/item_view_submittal_cc" />
+
+
+                <include
+                    android:id="@+id/infoContainer"
+                    layout="@layout/item_view_submittal_info" />
+
+
+                <include
+                    android:id="@+id/dateReqContainer"
+                    layout="@layout/item_view_submittal_date_req" />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,80 @@
+<resources>
+    <dimen name="label_title_size">14sp</dimen>
+    <dimen name="padding_label_view">10dp</dimen>
+    <dimen name="dashboard_text_size">@dimen/_12sdp</dimen>
+    <dimen name="drawing_list_space">@dimen/_20sdp</dimen>
+    <dimen name="options_image_size">@dimen/_52sdp</dimen>
+    <dimen name="space_drawing_list">@dimen/_15sdp</dimen>
+    <dimen name="drawing_list_space_top">@dimen/_10sdp</dimen>
+
+    <dimen name="dialog_title_text_size">@dimen/_17sdp</dimen>
+    <dimen name="dialog_subtitle_text_size">@dimen/_11sdp</dimen>
+    <dimen name="dialog_subtitle_bold_text_size">@dimen/_11sdp</dimen>
+    <dimen name="spinner_text_size">@dimen/_13sdp</dimen>
+    <dimen name="field_paper_work_text_size">@dimen/_12sdp</dimen>
+    <dimen name="text_size_9sdp">@dimen/_9sdp</dimen>
+    <dimen name="text_size_10sdp">@dimen/_10sdp</dimen>
+    <dimen name="day_text_size">@dimen/_13sdp</dimen>
+    <dimen name="text_size_13sdp">@dimen/_13sdp</dimen>
+    <dimen name="text_size_14sdp">@dimen/_14sdp</dimen>
+    <dimen name="text_size_16sdp">@dimen/_16sdp</dimen>
+    <dimen name="text_size_15sdp">@dimen/_15sdp</dimen>
+    <dimen name="text_size_18sdp">@dimen/_18sdp</dimen>
+    <dimen name="text_size_20sdp">@dimen/_20sdp</dimen>
+    <dimen name="weather_ic_30sdp">@dimen/_30sdp</dimen>
+    <dimen name="text_size_11sdp">@dimen/_11sdp</dimen>
+    <dimen name="text_size_22sdp">@dimen/_22sdp</dimen>
+    <dimen name="text_size_24sdp">@dimen/_24sdp</dimen>
+    <dimen name="add_text_size">@dimen/_11sdp</dimen>
+    <dimen name="weather_title_text_size">@dimen/_13sdp</dimen>
+    <dimen name="crew_title_text_size">@dimen/_12sdp</dimen>
+    <dimen name="error_text_size">@dimen/_11sdp</dimen>
+    <dimen name="remove_icon_height_width">@dimen/_15sdp</dimen>
+    <dimen name="album_photo_radius">20dp</dimen>
+    <dimen name="album_photo_radius_new">10dp</dimen>
+    <dimen name="forget_password_dailog">@dimen/_10sdp</dimen>
+    <dimen name="album_count_radius">@dimen/_1sdp</dimen>
+    <dimen name="work_detail_image_view">@dimen/_57sdp</dimen>
+    <dimen name="work_detail_view">@dimen/_67sdp</dimen>
+    <dimen name="crew_company_text_size">@dimen/_12sdp</dimen>
+    <dimen name="autocomplete_padding">@dimen/_7sdp</dimen>
+
+
+    <dimen name="amdp_date_picker_view_animator_height">252dp</dimen>
+    <dimen name="amdp_month_day_label_text_size">14sp</dimen>
+    <dimen name="amdp_day_number_select_circle_radius">16dp</dimen>
+    <dimen name="amdp_day_highlight_circle_radius">2dp</dimen>
+    <dimen name="amdp_day_highlight_circle_margin">5dp</dimen>
+    <dimen name="amdp_month_label_size">14sp</dimen>
+    <dimen name="amdp_day_number_size">14sp</dimen>
+
+    <dimen name="amdp_year_label_height">48dp</dimen>
+    <dimen name="ok_button_common_margin">10dp</dimen>
+    <dimen name="ok_button_height">40dp</dimen>
+    <dimen name="cross_button_height_width">20dp</dimen>
+
+    <dimen name="amdp_month_list_item_header_height">20dp</dimen>
+    <dimen name="header_text_size">22sp</dimen>
+    <dimen name="header_padding">4dp</dimen>
+
+<!--
+
+
+    <dimen name="amdp_date_picker_view_animator_height">252dp</dimen>
+    <dimen name="amdp_month_list_item_header_height">20dp</dimen>
+    <dimen name="amdp_month_day_label_text_size">14sp</dimen>
+    <dimen name="amdp_day_number_select_circle_radius">16dp</dimen>
+    <dimen name="amdp_day_highlight_circle_radius">2dp</dimen>
+    <dimen name="amdp_day_highlight_circle_margin">5dp</dimen>
+    <dimen name="amdp_month_label_size">14sp</dimen>
+    <dimen name="amdp_day_number_size">14sp</dimen>
+    <dimen name="amdp_year_label_height">48dp</dimen>
+    <dimen name="ok_button_common_margin">10dp</dimen>
+    <dimen name="ok_button_height">40dp</dimen>
+
+-->
+    <dimen name="popup_menu_padding">@dimen/_19sdp</dimen>
+    <dimen name="punchlist_popup_menu_padding">@dimen/_13sdp</dimen>
+
+    <dimen name="chips_padding">@dimen/_2sdp</dimen>
+</resources>

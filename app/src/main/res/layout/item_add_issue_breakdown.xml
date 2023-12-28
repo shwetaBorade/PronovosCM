@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.pronovoscm.R" />
+
+        <variable
+            name="issueBreakdown"
+            type="com.pronovoscm.model.view.IssueBreakdown" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/projectCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/_2sdp"
+                android:text="@string/hash"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvItemNumber"
+                style="@style/textViewLabelsValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{issueBreakdown.number == 0 ? context.getString(R.string.new_title) : String.valueOf(issueBreakdown.number)}"
+                app:layout_constraintEnd_toStartOf="@+id/ivDeleteBreakdown"
+                app:layout_constraintStart_toEndOf="@+id/tvNumber"
+                app:layout_constraintTop_toTopOf="@+id/tvNumber"
+                tools:text="1" />
+
+            <ImageView
+                android:id="@+id/ivDeleteBreakdown"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:contentDescription="@string/delete_breakdown"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvNumber" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/description"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size"
+                app:layout_constraintEnd_toEndOf="@+id/ivDeleteBreakdown"
+                app:layout_constraintStart_toStartOf="@+id/tvNumber"
+                app:layout_constraintTop_toBottomOf="@+id/tvItemNumber" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilIssueDescription"
+                style="@style/text_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@id/tvDescription"
+                app:layout_constraintStart_toStartOf="@id/tvDescription"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription">
+
+                <EditText
+                    android:id="@+id/etDescription"
+                    style="@style/edit_text_with_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:inputType="text"
+                    android:hint="@string/enter_description"
+                    android:maxLength="300"
+                    android:text="@={issueBreakdown.description}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvAdditionalDays"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/additional_days"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size"
+                app:layout_constraintEnd_toEndOf="@id/tilIssueDescription"
+                app:layout_constraintStart_toStartOf="@id/tilIssueDescription"
+                app:layout_constraintTop_toBottomOf="@id/tilIssueDescription" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAdditionalDays"
+                style="@style/text_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:layout_constraintEnd_toEndOf="@id/tvAdditionalDays"
+                app:layout_constraintStart_toStartOf="@id/tvAdditionalDays"
+                app:layout_constraintTop_toBottomOf="@id/tvAdditionalDays">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etAdditionalDays"
+                    style="@style/edit_text_with_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:inputType="number"
+                    android:hint="@string/enter_days"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvCostRom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/cost_rom"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size"
+                app:layout_constraintEnd_toEndOf="@id/tilAdditionalDays"
+                app:layout_constraintStart_toStartOf="@id/tilAdditionalDays"
+                app:layout_constraintTop_toBottomOf="@id/tilAdditionalDays" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCostROM"
+                style="@style/text_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:hintEnabled="false"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvCostRom"
+                app:layout_constraintStart_toStartOf="@id/tvCostRom"
+                app:layout_constraintTop_toBottomOf="@id/tvCostRom"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etCostROM"
+                    style="@style/edit_text_with_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:hint="@string/enter_amount"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

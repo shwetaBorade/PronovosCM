@@ -1,0 +1,218 @@
+buildscript {
+    repositories {
+      //  maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+      //  classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'io.fabric'
+// Apply the Crashlytics Gradle plugin
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'kotlin-android-extensions'
+
+greendao {
+//    released version 14 befrore drawing punchlist and current revision in drawing
+    // updated the new version for form saction
+    //schemaVersion 33//updated version new design and project icon changes
+//    schemaVersion 34 //Updated for Issue Tracking DB
+    schemaVersion 35 //Updated for Issue Tracking enhancement
+}
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'pronovoscm'
+            keyPassword 'pr0n0v0sCM'
+            storeFile file('../PronovosCM.jks')
+            storePassword 'pr0n0v0sCM'
+        }
+
+    }
+    compileSdkVersion 33
+    flavorDimensions "default"
+    defaultConfig {
+        applicationId 'com.pronovoscm'
+        minSdkVersion 26
+        targetSdkVersion 33
+        versionCode 61
+        versionName '3.0.15'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        generatedDensities = []
+        multiDexEnabled true
+        manifestPlaceholders = [pdftronLicenseKey:PDFTRON_LICENSE_KEY]
+//        manifestPlaceholders = [pdftronLicenseKey: "ProNovos LLC(pronovos.com):OEM:ProNovos Operations Manager::L:AMS(20201219):9196A6D0B6100C7A276428F10B292D940A0BE51C6B11B7126E1D3A9431F5C7"]
+//        manifestPlaceholders = [pdftronLicenseKey: "demo:shweta.jain@galaxyweblinks.in:72bb943d01a03b75651b6b6ac16230889932eb5e1a111d2841"]
+        ndk {
+            // Tells Gradle to build outputs for the following ABIs and package
+            // them into your APK.
+            abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        development {
+//            buildConfigField "String", "BASE_URL", "\"https://app.pronovos.com/api/v6/\""
+//              buildConfigField "String", "BASE_URL", "\"https://poc.pronovos.com/api/v8/\""
+            //  buildConfigField "String", "BASE_URL", "\"https://poc.pronovos.com/api/v10/\""
+            buildConfigField "String", "BASE_URL", "\"https://poc.pronovos.com/api/v12/\""
+//              buildConfigField "String", "BASE_URL", "\"https://app.pronovos.com/api/v9/\""
+//              buildConfigField "String", "BASE_URL", "\"https://staging.pronovos.com/api/v5/\""
+            //buildConfigField "String", "BASE_URL", "\"https://staging.pronovos.com/api/v4/\""
+        //    buildConfigField "String", "BASE_URL", "\"http://dev.smartsubz.com/api/v4/\""
+//            buildConfigField "String", "BASE_URL", "\"https://cm.pronovos.com/api/v2/\""
+//            buildConfigField "String", "BASE_URL", "\"https://cm.pronovos.com/api/v1/\""
+//            buildConfigField "String", "BASE_URL", "\"https://cm.pronovos.com/api/v2/\""
+        }
+        production {
+//            buildConfigField "String", "BASE_URL", "\"https://poc.pronovos.com/api/v7/\""
+//            buildConfigField "String", "BASE_URL", "\"https://app.pronovos.com/api/v8/\""
+            buildConfigField "String", "BASE_URL", "\"https://app.pronovos.com/api/v12/\""
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    configurations.all {
+//        resolutionStrategy.force "com.android.support:appcompat-v7:28.0.0"
+        resolutionStrategy.force "com.android.support:support-v4:28.0.0"
+        resolutionStrategy.force "androidx.appcompat:appcompat:$mySupportVersion"
+        resolutionStrategy.force "androidx.legacy:legacy-support-v4:1.0.0"
+        resolutionStrategy.force "androidx.lifecycle:runtime:$myLifeCycleVersion"
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        }
+    }
+
+//    splits {
+//
+//        // Configures multiple APKs based on screen density.
+//        density {
+//            // Configures multiple APKs based on screen density.
+//            enable true
+//
+//            // Specifies a list of screen densities Gradle should not create multiple APKs for.
+//            exclude "ldpi", "xxhdpi", "xxxhdpi"
+//
+//            // Specifies a list of compatible screen size settings for the manifest.
+//            compatibleScreens 'small', 'normal', 'large', 'xlarge'
+//        }
+//
+//        // Configures multiple APKs based on ABI.
+//        abi {
+//
+//            // Enables building multiple APKs per ABI.
+//            enable true
+//
+//            // By default all ABIs are included, so use reset() and include to specify that we only
+//            // want APKs for x86, armeabi-v7a, and mips.
+//
+//            // Resets the list of ABIs that Gradle should create APKs for to none.
+//            reset()
+//
+//            // Specifies a list of ABIs that Gradle should create APKs for.
+//            include "x86", "armeabi-v7a"
+//
+//            // Specifies that we do not want to also generate a universal APK that includes all ABIs.
+//            universalApk false
+//        }
+//    }
+//    android {
+
+    lintOptions {
+        abortOnError false
+        warningsAsErrors false
+    }
+    tasks.whenTaskAdded { task ->
+    println("Task: " + task.name)
+//        if (task.name == 'compileDebugSources' || task.name == 'compileReleaseSources' || task.name == 'compileDevelopmentDebugSources') {
+        if (task.name == 'compileDebugSources' || task.name == 'compileReleaseSources'  ) {
+            task.dependsOn lint
+            task.mustRunAfter lint
+        }
+    }
+//    }
+    buildFeatures{
+        dataBinding = true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.15'
+    implementation 'com.google.dagger:dagger:2.15'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    implementation 'org.greenrobot:greendao:3.3.0'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    implementation('com.github.bumptech.glide:glide:4.11.0') {
+        exclude group: "com.android.support"
+    }
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.google.android.material:material:1.4.0'
+   /* implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
+        transitive = true
+    }*/
+    implementation 'androidx.exifinterface:exifinterface:1.3.2'
+    implementation 'com.pdftron:pdftron@aar'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation project(path: ':PDFViewCtrlTools')
+    implementation 'androidx.work:work-runtime:2.7.1'
+    implementation project(path: ':library')
+//    testImplementation project(":lib-recur-hamcrest")
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:30.5.0')
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+//    lintChecks 'com.github.yogeshtatwalgwl:CustomLint:v1.0'
+
+    //Mockito
+    testImplementation "org.mockito.kotlin:mockito-kotlin:4.1.0"
+    // Mock web server
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.10.0'
+    // Google truth for assertion
+    testImplementation "com.google.truth:truth:1.1.3"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.2"
+
+}

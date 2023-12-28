@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.pronovoscm.utils.DateFormatter" />
+
+        <variable
+            name="issueTracking"
+            type="com.pronovoscm.model.view.IssueListItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/projectIssuesCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="@dimen/_5sdp"
+        android:alpha="@{issueTracking.resolvedStatus ? 0.5F : 1F }"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/issueId"
+                style="@style/textViewLabelsValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:text='@{"#" + issueTracking.issueNumber}'
+                app:layout_constraintEnd_toStartOf="@+id/ivResolved"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="#001" />
+
+            <ImageView
+                android:id="@+id/ivResolved"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@drawable/rounded_blue_bg"
+                android:contentDescription="@string/resolved"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_punchlist_approve"
+                android:visibility='@{issueTracking.resolvedStatus ? View.VISIBLE : View.INVISIBLE}'
+                app:layout_constraintBottom_toBottomOf="@+id/issueId"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/issueId" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                style="@style/textViewLabelsValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/issueId"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-black"
+                android:text="@{issueTracking.title}"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/ivResolved"
+                app:layout_constraintStart_toStartOf="@+id/issueId"
+                app:layout_constraintTop_toBottomOf="@+id/issueId"
+                tools:text="Title..." />
+
+            <TextView
+                android:id="@+id/textViewLabelCreatedDate"
+                style="@style/textViewLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:text="@string/created"
+                app:layout_constraintEnd_toStartOf="@+id/textViewCreatedDate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+            <TextView
+                android:id="@+id/textViewCreatedDate"
+                style="@style/textViewLabelsValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="@dimen/_2sdp"
+                android:text="@{DateFormatter.getDisplayDate(issueTracking.dateCreated, DateFormatter.SERVICE_DATE_FORMAT, DateFormatter.DATE_FORMAT_MMDDYYYY)}"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTitle"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textViewLabelCreatedDate"
+                app:layout_constraintTop_toTopOf="@+id/textViewLabelCreatedDate"
+                tools:text="04/30/2020" />
+
+            <TextView
+                android:id="@+id/textViewLabelResolvedDate"
+                style="@style/textViewLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:text="@string/resolved"
+                android:visibility='@{issueTracking.resolvedStatus ? View.VISIBLE : View.GONE}'
+                app:layout_constraintEnd_toStartOf="@+id/textViewCreatedDate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/textViewLabelCreatedDate"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCreatedDate" />
+
+            <TextView
+                android:id="@+id/textViewResolvedDate"
+                style="@style/textViewLabelsValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@{issueTracking.dateResolved != null ? DateFormatter.getDisplayDate(issueTracking.dateResolved, DateFormatter.SERVICE_DATE_FORMAT, DateFormatter.DATE_FORMAT_MMDDYYYY) : null}"
+                android:visibility='@{issueTracking.resolvedStatus ? View.VISIBLE : View.GONE}'
+                app:layout_constraintEnd_toEndOf="@+id/textViewCreatedDate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textViewLabelResolvedDate"
+                app:layout_constraintTop_toTopOf="@+id/textViewLabelResolvedDate"
+                tools:text="04/30/2020" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvImpactsAndCause"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textViewCreatedDate"
+                app:layout_constraintStart_toStartOf="@+id/textViewLabelCreatedDate"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLabelResolvedDate"
+                app:layout_constraintVertical_bias="0.0"
+                tools:listitem="@layout/item_issue_impact_and_root_cause" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

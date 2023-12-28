@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3cacdf</color>
+    <color name="blue_0091ea">#0091ea</color>
+    <color name="colorPrimary_alpha50">#803cacdf</color>
+    <color name="colorPrimaryDark">#3f3f3f</color>
+    <color name="app_color_primary_dark_day">#3f3f3f</color>
+    <color name="colorAccent">#35a2db</color>
+    <color name="gray_c6cbd4">#c6cbd4</color>
+    <color name="gray_656565">#656565</color>
+    <color name="gray_4a4a4a">#4a4a4a</color>
+    <color name="gray_535a73">#535a73</color>
+    <color name="gray_929FA8">#929FA8</color>
+
+    <color name="blue_0061a3">#0061a3</color>
+    <color name="gray_808ba2">#808ba2</color>
+    <color name="gray_948d8d">#948d8d</color>
+    <color name="red_ff0000">#FF0000</color>
+    <color name="black_222222">#222222</color>
+    <color name="blue_26a3e5">#26a3e5</color>
+    <color name="blue_complete">#ffe5eff6</color>
+    <color name="black_38000000">#38000000</color>
+    <color name="gray_cccccc">#cccccc</color>
+    <color name="blue_12577b">#12577b</color>
+    <color name="gray_fafafa">#fafafa</color>
+    <color name="gray_6c7b8a">#6c7b8a</color>
+    <color name="red_ff2424">#ff2424</color>
+    <color name="black_3c3c3c">#3c3c3c</color>
+    <color name="tool_bg">#88151414</color>
+    <color name="tool_image_bg">#cc151414</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="recomplete_color">#F2E5E5</color>
+    <color name="yellow_eaf2b4">#eaf2b4</color>
+
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
+    <color name="tools_light_gray">#dedede</color>
+    <color name="black_333333">#333333</color>
+    <color name="translucent_blue">#440061a3</color>
+    <color name="gray_838484">#838484</color>
+    <color name="gray_747e8d">#747e8d</color>
+    <color name="gray_dedede">#dedede</color>
+    <color name="gray_424242">#424242</color>
+    <color name="green_complete">#2dcc91</color>
+
+    <color name="colorChipViewBackground">#3cacdf</color>
+    <color name="disable_gray">#8080868B</color>
+   <color name="disable_transfer">#E0DEDE</color>
+   <color name="disable_white">#80FFFFFF</color>
+   <!-- <color name="color_accent">#3cacdc</color>
+
+    <color name="amdp_white">#ffffff</color>
+
+    <color name="amdp_date_picker_text_normal">#ff212121</color>
+    <color name="amdp_date_picker_text_highlighted">@color/amdp_date_picker_text_normal</color>
+    <color name="amdp_date_picker_text_disabled">#ccc</color>
+    <color name="amdp_date_picker_month_day">#767676</color>
+
+    &lt;!&ndash; DatePicker Dark Theme &ndash;&gt;
+    <color name="amdp_date_picker_view_animator_dark_theme">@color/amdp_light_gray</color>
+    <color name="amdp_date_picker_text_normal_dark_theme">@color/amdp_white</color>
+    <color name="amdp_date_picker_month_day_dark_theme">#b4b4b4</color>
+    <color name="amdp_date_picker_text_disabled_dark_theme">#767676</color>
+    <color name="amdp_date_picker_text_highlighted_dark_theme">@color/amdp_date_picker_text_normal_dark_theme</color>
+
+    <color name="amdp_date_picker_view_animator">@android:color/white</color>
+
+    &lt;!&ndash; TimePicker Dark Theme &ndash;&gt;
+
+    &lt;!&ndash; Colors for red theme &ndash;&gt;
+    <color name="amdp_light_gray">#424242</color>-->
+
+    <color name="dark_gray">#ff444444</color> <!-- 75% black -->
+    <color name="light_gray">#ffcccccc</color> <!-- 20% black -->
+    <color name="red">#FF0000</color>
+    <color name="tools_gray">#919190</color>
+    <color name="gray200">#EEEEEE</color>
+    <color name="gray">#535a73</color>
+
+    <color name="option_menu_divider">#d7d2d2</color>
+
+
+    <color name="color_accent">#3cacdc</color>
+
+    <color name="amdp_white">#ffffff</color>
+
+    <color name="amdp_date_picker_text_normal">#ff212121</color>
+    <color name="amdp_date_picker_text_highlighted">@color/amdp_date_picker_text_normal</color>
+    <color name="amdp_date_picker_text_disabled">#ccc</color>
+    <color name="amdp_date_picker_month_day">#767676</color>
+
+    <!-- DatePicker Dark Theme -->
+    <color name="amdp_date_picker_view_animator_dark_theme">@color/amdp_light_gray</color>
+    <color name="amdp_date_picker_text_normal_dark_theme">@color/amdp_white</color>
+    <color name="amdp_date_picker_month_day_dark_theme">#b4b4b4</color>
+    <color name="amdp_date_picker_text_disabled_dark_theme">#767676</color>
+    <color name="amdp_date_picker_text_highlighted_dark_theme">@color/amdp_date_picker_text_normal_dark_theme</color>
+
+    <color name="amdp_date_picker_view_animator">@android:color/white</color>
+
+    <!-- TimePicker Dark Theme -->
+
+    <!-- Colors for red theme -->
+    <color name="amdp_light_gray">#424242</color>
+
+    <color name="hint_gray_808ba2">#65808ba2</color>
+    <color name="gray_525d68">#525d68</color>
+    <color name="gray_979797">#979797</color>
+    <color name="red_d0021b">#d0021b</color>
+    <color name="green_29b76b">#29b76b</color>
+    <color name="green_4b9f63">#4b9f63</color>
+    <color name="green_00aa4f">#00aa4f</color>
+
+    <color name="form_bg_color">#f5f7f8</color>
+
+    <color name="impact_color">#005EA2</color>
+    <color name="root_cause_color">#FF6B6B</color>
+    <color name = "greyE8ECF3">#E8ECF3</color>
+    <color name="color_filter_item_label">#525A78</color>
+
+</resources>

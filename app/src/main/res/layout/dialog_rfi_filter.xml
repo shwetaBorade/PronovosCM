@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:maxHeight="@dimen/_350sdp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardElevation="@dimen/_3sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/_12sdp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="-3sp"
+                android:text="@string/filter"
+                android:textColor="@color/gray_424242"
+                android:textSize="@dimen/text_size_22sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTextView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/status"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/text_size_13sdp" />
+
+            <RelativeLayout
+                android:id="@+id/statusSpinnewView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/statusTextView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:background="@drawable/rounded_gray_border">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/statusSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_9sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@null" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/assignedToTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/statusSpinnewView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/assigned_to_small"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/text_size_13sdp" />
+
+
+            <RelativeLayout
+                android:id="@+id/assignedToSpinnewView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/assignedToTextView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:background="@drawable/rounded_gray_border">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/assignedToSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_9sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@null" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dateDueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/assignedToSpinnewView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/date_due"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/dateDueShowView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateDueTextView"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:background="@drawable/rounded_gray_border">
+
+                <TextView
+                    android:id="@+id/datedueTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_9sdp"
+                    android:fontFamily="sans-serif"
+                    android:hint="Please select due date"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:textColor="@color/gray_747e8d"
+                    android:textColorHint="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dateSubmittedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateDueShowView"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/date_submitted"
+                android:textColor="@color/gray_747e8d"
+                android:textSize="@dimen/dashboard_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/dateSubmittedShowView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateSubmittedTextView"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:background="@drawable/rounded_gray_border">
+
+                <TextView
+                    android:id="@+id/dateSubmittedTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_9sdp"
+                    android:fontFamily="sans-serif"
+                    android:hint="Please select date submitted"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:textColor="@color/gray_747e8d"
+                    android:textColorHint="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateSubmittedShowView"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/cancelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray_4a4a4a"
+                    android:textSize="@dimen/text_size_13sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/saveTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/save"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_13sdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

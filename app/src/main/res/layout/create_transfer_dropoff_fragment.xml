@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true">
+
+
+    <ScrollView
+        android:id="@+id/addCrewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/mainView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/top_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_9sdp"
+                android:background="@color/white"
+                android:paddingTop="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top_view">
+
+                <TextView
+                    android:id="@+id/dropoffDateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/drop_off_date"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <TextView
+                    android:id="@+id/conditiondropoffTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_toRightOf="@id/dropoffDateTextView"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="*"
+                    android:textColor="@color/red_d0021b"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dropoffDateView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dropoffDateTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border">
+
+                    <EditText
+                        android:id="@+id/dropoffDateViewET"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:background="@android:color/transparent"
+                        android:drawableRight="@drawable/ic_calendar_transfer"
+                        android:focusedByDefault="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/select_date"
+                        android:imeOptions="flagNoExtractUi"
+                        android:importantForAutofill="no"
+                        android:inputType="textNoSuggestions"
+                        android:nextFocusUp="@id/dropoffTimeViewET"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/clickViewDate"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/dropOffDateErrorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dropoffDateView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:gravity="left"
+                    android:textColor="@color/red_ff0000"
+                    android:textSize="@dimen/error_text_size" />
+
+                <TextView
+                    android:id="@+id/timeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dropOffDateErrorTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/time_str"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <TextView
+                    android:id="@+id/conditionTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dropoffDateView"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_toRightOf="@id/timeTextView"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="*"
+                    android:textColor="@color/red_d0021b"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/timeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timeTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border">
+
+
+                    <EditText
+                        android:id="@+id/dropoffTimeViewET"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:background="@android:color/transparent"
+                        android:drawableRight="@drawable/ic_access_time_transfer"
+                        android:focusedByDefault="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/select_time"
+                        android:imeOptions="flagNoExtractUi"
+                        android:importantForAutofill="no"
+                        android:inputType="textNoSuggestions"
+                        android:nextFocusUp="@id/passwordEditText"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/clickViewTime"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/dropOffTimeErrorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timeView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:gravity="left"
+                    android:textColor="@color/red_ff0000"
+                    android:textSize="@dimen/error_text_size" />
+
+                <TextView
+                    android:id="@+id/dropoffLocatioTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dropOffTimeErrorTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/drop_off_location"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <TextView
+                    android:id="@+id/conditiondropoffLocationTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dropOffTimeErrorTextView"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_toRightOf="@id/dropoffLocatioTextView"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="*"
+                    android:textColor="@color/red_d0021b"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <Switch
+                    android:id="@+id/switchLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dropOffTimeErrorTextView"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_toLeftOf="@id/switchLocationTextViewView"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/switchLocationTextViewView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dropOffTimeErrorTextView"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/jobsite"
+                    android:textColor="#5a6871"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <RelativeLayout
+                    android:id="@+id/dropoffLocationSpinnewView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/switchLocation"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border">
+
+                    <TextView
+                        android:id="@+id/dropoffLocationTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginTop="@dimen/_9sdp"
+                        android:layout_marginBottom="@dimen/_9sdp"
+                        android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size" />
+
+                    <TextView
+                        android:id="@+id/selectTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:fontFamily="sans-serif"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/please_select_location"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/dropoffLocatioErrorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dropoffLocationSpinnewView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left"
+                    android:textColor="@color/red_ff0000"
+                    android:textSize="@dimen/error_text_size" />
+
+                <TextView
+                    android:id="@+id/dropoffContactTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dropoffLocatioErrorTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/drop_off_contact"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <TextView
+                    android:id="@+id/conditiondropoffContactTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dropoffLocatioErrorTextView"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toEndOf="@id/dropoffContactTextView"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="*"
+                    android:textColor="@color/red_d0021b"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <RelativeLayout
+                    android:id="@+id/dropoffLocatioView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dropoffContactTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/dropoffNameAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:background="@null"
+                        android:longClickable="false"
+                        android:completionThreshold="1"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/please_enter_name"
+                        android:imeOptions="flagNoExtractUi"
+                        android:importantForAutofill="no"
+                        android:inputType="textNoSuggestions"
+                        android:lines="1"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/dropOffNameErrorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dropoffLocatioView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:gravity="left"
+                    android:textColor="@color/red_ff0000"
+                    android:textSize="@dimen/error_text_size" />
+
+                <TextView
+                    android:id="@+id/dropoffNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dropOffNameErrorTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/drop_off_contact_phone"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <TextView
+                    android:id="@+id/conditiondropoffNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dropoffLocatioView"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_toEndOf="@id/dropoffNumberTextView"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="*"
+                    android:textColor="@color/red_d0021b"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <RelativeLayout
+                    android:id="@+id/dropoffNumberView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dropoffNumberTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border">
+
+
+                    <EditText
+                        android:id="@+id/dropoffNumberNewET"
+                        style="@style/BasicEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:background="@android:color/transparent"
+                        android:longClickable="false"
+                        android:focusedByDefault="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/please_enter_number"
+                        android:imeOptions="flagNoExtractUi"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="12"
+                        android:maxLines="1"
+                        android:nextFocusUp="@id/pickUpTimeViewET"
+                        android:paddingTop="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/dropOffNumberErrorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dropoffNumberView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:gravity="left"
+                    android:textColor="@color/red_ff0000"
+                    android:textSize="@dimen/error_text_size" />
+
+                <RelativeLayout
+                    android:id="@+id/requestView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dropOffNumberErrorTextView"
+                    android:layout_marginBottom="@dimen/_16sdp">
+
+                    <TextView
+                        android:id="@+id/roundTripTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/round_trip"
+                        android:textColor="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size" />
+
+                    <Switch
+                        android:id="@+id/switchRounTrip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_toRightOf="@id/roundTripTextView"
+                        android:checked="false" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/unloadingMethodTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/requestView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/unloading_at_jobsite_method"
+                    android:textColor="@color/gray_747e8d"
+                    android:textSize="@dimen/dashboard_text_size" />
+
+                <RelativeLayout
+                    android:id="@+id/unloadingMethodSpinnewView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/unloadingMethodTextView"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/rounded_gray_border">
+
+
+                    <TextView
+                        android:id="@+id/selectMethodTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:fontFamily="sans-serif"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/select_one_str"
+                        android:textColor="@color/gray_747e8d"
+                        android:textColorHint="@color/gray_747e8d"
+                        android:textSize="@dimen/dashboard_text_size" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/unloadingMethodSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_marginTop="@dimen/_9sdp"
+                        android:layout_marginBottom="@dimen/_9sdp"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/gray_747e8d" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/dropOffUnloadingMethodErrorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/unloadingMethodSpinnewView"
+                    android:layout_marginLeft="@dimen/_21sdp"
+                    android:gravity="left"
+                    android:textColor="@color/red_ff0000"
+                    android:textSize="@dimen/error_text_size" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dropOffUnloadingMethodErrorTextView"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/nextTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/cancelTextView"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:background="@drawable/rounded_blue_button"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_9sdp"
+                        android:text="@string/next"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_14sdp"
+                        app:layout_constraintBottom_toTopOf="@id/cancelTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cancelTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_9sdp"
+                        android:background="@drawable/rounded_button_gray_border"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_9sdp"
+                        android:paddingBottom="@dimen/_9sdp"
+                        android:text="@string/cancel"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_4a4a4a"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:textSize="@dimen/text_size_14sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

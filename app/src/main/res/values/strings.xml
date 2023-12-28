@@ -1,0 +1,416 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <array name="letter_tile_colors" translatable="false">
+        <item>#f16364</item>
+        <item>#f58559</item>
+        <item>#f9a43e</item>
+        <item>#e4c62e</item>
+        <item>#67bf74</item>
+        <item>#59a2be</item>
+        <item>#2093cd</item>
+        <item>#ad62a7</item>
+    </array>
+
+    <!--<string name="app_name" translatable="false">ProNovos CM</string>-->
+    <dimen name="tile_letter_font_size">17sp</dimen>
+    <dimen name="letter_tile_size">32dp</dimen>
+    <string name="app_name" translatable="false">PronovosCM</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="login" translatable="false">LOG IN</string>
+    <string name="forgot_password" translatable="false">Forgot Password?</string>
+    <string name="internet_connection_check" translatable="false">Please check your internet connection</string>
+    <string name="internet_connection_check_transfer_overview" translatable="false">Internet Connection has been lost. Please reconnect to continue.</string>
+    <string name="please_enter_a_valid_email_address" translatable="false">Please enter a valid email address.</string>
+    <string name="the_email_must_be_a_valid_email_address" translatable="false">The email must be a valid email address.</string>
+    <string name="please_enter_your_password" translatable="false">Please enter your password.</string>
+    <string name="are_you_sure_you_want_to_logout" translatable="false">Are you sure you want to Logout?</string>
+    <string name="logout" translatable="false">Logout</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="photos" translatable="false">Photos</string>
+    <string name="overview" translatable="false">Overview</string>
+    <string name="drawings" translatable="false">Drawings</string>
+    <string name="field_paper_work" translatable="false">Field Paperwork</string>
+    <string name="new_album" translatable="false">New Album</string>
+    <string name="album_name_str" translatable="false">Album Name</string>
+    <string name="save" translatable="false">Save</string>
+    <string name="ok" translatable="false">Ok</string>
+    <string name="description" translatable="false">Description</string>
+    <string name="no_photos_status" translatable="false">No photos have been added to this album yet.</string>
+    <string name="forgot_password_heading" translatable="false">Forgot Password</string>
+    <string name="enter_a_name_for_this_album" translatable="false">Enter a name for this album</string>
+    <string name="tap_to_markup_a_photo_individually" translatable="false">Tap to markup a photo individually</string>
+    <string name="select_tags" translatable="false">Select tags</string>
+    <string name="upload_photos" translatable="false">Upload Photos</string>
+    <string name="are_you_sure_you_want_to_discard_these_photos" translatable="false">Are you sure you want to discard these photos?</string>
+    <string name="message" translatable="false">Message</string>
+    <string name="select_album" translatable="false">Select Album</string>
+    <string name="select_company_list" translatable="false">Select Company</string>
+    <string name="title_select_assignee" translatable="false">Select Assignee</string>
+    <string name="uploaded_by" translatable="false">Uploaded By</string>
+    <string name="pronovos_image" translatable="false">Pronovos Image</string>
+    <string name="edit_image" translatable="false">Edit Image</string>
+    <string name="offline_mode" translatable="false">Offline Mode</string>
+    <string name="offline_mode_equipment" translatable="false">Some Equipment Modules not available in Offline Mode.</string>
+    <string name="search" translatable="false">Search</string>
+    <string name="no_record_found" translatable="false">Cannot Retrieve Data. Please try reconnecting to internet.</string>
+    <string name="update" translatable="false">Update</string>
+    <string name="synced" translatable="false">Synced</string>
+    <string name="unavailable_offline" translatable="false">Unavailable Offline</string>
+    <string name="unavailable_offline_document" translatable="false">Unavailable\nOffline</string>
+    <string name="more_than_10_image_message" translatable="false">You can upload 25 images at a time, Please click on Next to proceed.</string>
+    <string name="more_than_1_image_message" translatable="false">You can upload 1 image at a time, Please click on Next to proceed.</string>
+    <string name="daily_reports" translatable="false">Daily Reports</string>
+    <string name="inspections" translatable="false">Inspections</string>
+    <string name="weather" translatable="false">Weather</string>
+    <string name="work_impacts" translatable="false">Work Impacts</string>
+    <string name="work_impact" translatable="false">Work Impact</string>
+    <string name="work_details" translatable="false">Work Details</string>
+    <string name="weather_impact" translatable="false">Weather Impact</string>
+    <string name="yes" translatable="false">Yes</string>
+    <string name="no" translatable="false">No</string>
+    <string name="conditions" translatable="false">Conditions</string>
+    <string name="notes" translatable="false">Notes</string>
+    <string name="weather_widget" translatable="false">Weather Widget</string>
+    <string name="punch_list" translatable="false">Punch List</string>
+    <string name="forms" translatable="false">Forms</string>
+    <string name="documents" translatable="false">Documents</string>
+    <string name="status" translatable="false">Status</string>
+    <string name="date_due" translatable="false">Date Due</string>
+    <string name="crew" translatable="false">Crew</string>
+    <string name="this_daily_report_will_be_synced_once_online" translatable="false">This Daily Report will be synced once Online</string>
+    <string name="add_new_crew" translatable="false">Add New Crew</string>
+    <string name="apprentice" translatable="false">Apprentice</string>
+    <string name="foreman" translatable="false">Foreman</string>
+    <string name="journeyman" translatable="false">Journeyman</string>
+    <string name="supt" translatable="false">Supt</string>
+    <string name="trade" translatable="false">Trade</string>
+    <string name="company" translatable="false">Company</string>
+    <string name="attachment" translatable="false">Attachment</string>
+    <string name="site_workers" translatable="false">Site Workers</string>
+    <string name="location" translatable="false">Location</string>
+    <string name="details_summary" translatable="false">Details Summary</string>
+    <string name="add_new_punch_list" translatable="false">Add New Punch List</string>
+    <string name="edit_punch_list" translatable="false">Edit Punch List</string>
+    <string name="to" translatable="false">To</string>
+    <string name="cc" translatable="false">Cc</string>
+    <string name="send" translatable="false">Send</string>
+    <string name="please_select_assignee" translatable="false">Please select assignee.</string>
+    <string name="select_assignee" translatable="false">Select Assignee.</string>
+    <string name="enter_description" translatable="false">Enter Description.</string>
+    <string name="please_select_trade" translatable="false">Please select trade.</string>
+    <string name="are_you_sure_you_want_to_exit_without_saving_your_changes" translatable="false">Are you sure you want to exit without saving your changes?</string>
+    <string name="are_you_sure_you_want_to_exit_without_saving" translatable="false">Are you sure you want to exit without saving?</string>
+    <string name="are_you_sure_you_want_to_exit" translatable="false">Are you sure you want to exit?</string>
+    <string name="are_you_sure_you_want_to_delete_this_entry" translatable="false">Are you sure you want to delete this entry?</string>
+    <string name="are_you_sure_you_want_to_delete" translatable="false">Are you sure you want to delete?</string>
+    <string name="are_you_sure_you_want_to_delete_this_issue" translatable="false">Are you sure you want to delete this issue?</string>
+    <string name="are_you_sure_you_want_to_permanently_remove_this_attachment" translatable="false">Are you sure you want to permanently remove this attachment?</string>
+    <string name="edit_work_impact" translatable="false">Edit Work Impact</string>
+    <string name="add_work_impact" translatable="false">Add Work Impact</string>
+    <string name="add_work_details" translatable="false">Add Work Details</string>
+    <string name="max_work_impact_attachement_message" translatable="false">You have reached the limit of 10 images per work impact item.</string>
+    <string name="max_attachement_message" translatable="false">You have reached the limit of 10 images per work details item.</string>
+    <string name="max_attachement_message_punch_list" translatable="false">You have reached the limit of 10 images per Punch List Item.</string>
+    <string name="assigned_to" translatable="false">Assigned To *</string>
+    <string name="assigned_to_small" translatable="false">Assigned to</string>
+    <string name="punch_list_item_description" translatable="false">Title*</string>
+    <string name="date_created" translatable="false">Date Created</string>
+    <string name="created_by" translatable="false">Created by</string>
+    <string name="new_title" translatable="false">New</string>
+    <string name="filter" translatable="false">Filter</string>
+    <string name="select_picture" translatable="false">Select Picture</string>
+    <string name="choose_from_library" translatable="false">Choose from Library</string>
+    <string name="take_photo" translatable="false">Take Photo</string>
+    <string name="add_photo" translatable="false">Add Photo!</string>
+    <string name="edit_work_details" translatable="false">Edit Work Details</string>
+    <string name="link_existing" translatable="false">Link Existing</string>
+    <string name="are_you_sure_you_want_to_remove_this_punch_list_markup_from_the_drawing" translatable="false">Are you sure you want to remove this punch list markup from the drawing?</string>
+    <string name="enter_supt" translatable="false">Enter Supt</string>
+    <string name="enter_apprentice" translatable="false">Enter Apprentice</string>
+    <string name="enter_foreman" translatable="false">Enter Foreman</string>
+    <string name="enter_journeyman" translatable="false">Enter Journeyman</string>
+    <string name="enter_location" translatable="false">Enter Location</string>
+    <string name="enter_details_summary" translatable="false">Enter Details Summary</string>
+    <string name="impact_summary" translatable="false">Impact Summary</string>
+    <string name="enter_impact_summary" translatable="false">Enter Impact Summary</string>
+    <string name="search_here" translatable="false">Search Here</string>
+    <string name="create_new_album" translatable="false">Create New Album</string>
+    <string name="albums" translatable="false">Albums</string>
+    <string name="log_in" translatable="false">LOG IN</string>
+    <string name="enter_your_password_here" translatable="false">Enter password here</string>
+    <string name="forgot_your_password" translatable="false">Forgot Your Password?</string>
+    <string name="continue_str" translatable="false">CONTINUE</string>
+    <string name="enter_email_here" translatable="false">Enter e-mail address here</string>
+    <string name="select_project" translatable="false">Select Project</string>
+    <string name="search_keywords" translatable="false">Search keywords</string>
+    <string name="select_keywords" translatable="false">Select Keywords</string>
+    <string name="create_str" translatable="false">CREATE</string>
+    <string name="share_report" translatable="false">Share Report</string>
+    <string name="please_select" translatable="false">Please Select</string>
+    <string name="please_type_here" translatable="false">Please Type Here</string>
+    <string name="select_conditions" translatable="false">Select Conditions</string>
+
+    <!-- LetterTileProvider -->
+    <!-- All of the possible tile background colors -->
+    <string name="enter_notes" translatable="false">Enter notes</string>
+
+    <!-- The default letter tile text size -->
+    <string name="please_select_one" translatable="false">Please Select One</string>
+    <!-- The deafult tile size -->
+    <string name="temp" translatable="false">%1$.2f&#xb0; F</string>
+    <!-- /LetterTileProvider -->
+
+    <!--
+        <string name="amdp_date_v1_monthyear">MMMM yyyy</string>
+    -->
+    <!--
+        <string name="amdp_ok">@android:string/ok</string>
+        <string name="amdp_cancel">@android:string/cancel</string>
+
+        <string name="amdp_day_picker_description">Month grid of days</string>
+
+        <string name="amdp_select_day">Select month and day</string>
+        <string name="amdp_item_is_selected"><xliff:g id="item" example="2013">%1$s</xliff:g> selected</string>
+        <string name="amdp_sans_serif" translatable="false">sans-serif</string>
+
+        <string name="amdp_day_of_week_label_typeface" translatable="false">sans-serif</string>-->
+    <string name="edit" translatable="false">Edit</string>
+    <string name="delete" translatable="false">Delete</string>
+
+
+    <string name="amdp_ok" translatable="false">@android:string/ok</string>
+    <string name="amdp_cancel" translatable="false">@android:string/cancel</string>
+
+    <string name="amdp_day_picker_description" translatable="false">Month grid of days</string>
+
+    <string name="amdp_select_day" translatable="false">Select month and day</string>
+    <string name="amdp_item_is_selected" translatable="false"><xliff:g example="2013" id="item">%1$s</xliff:g> selected</string>
+    <string name="amdp_sans_serif" translatable="false">sans-serif</string>
+
+    <string name="amdp_day_of_week_label_typeface" translatable="false">sans-serif</string>
+    <string name="open" translatable="false">Open</string>
+    <string name="complete" translatable="false">Complete</string>
+    <string name="edit_crew" translatable="false">Edit Crew</string>
+    <string name="add_crew" translatable="false">Add Crew</string>
+    <string name="would_you_like_to_sync_and_navigate_to_this_drawing" translatable="false">Would you like to sync and navigate to this drawing?</string>
+    <string name="this_drawing_is_not_synced_to_your_device_you_must_be_online_to_sync_drawings" translatable="false">This drawing is not synced to your device. You must be online to sync drawings.</string>
+    <string name="transfer_log" translatable="false">Transfer Log</string>
+    <string name="inventory" translatable="false">Inventory</string>
+    <string name="transfer_overview" translatable="false">Transfer Overview</string>
+    <string name="search_equipment" translatable="false">Search Equipment</string>
+    <string name="equipment" translatable="false">Equipment</string>
+    <string name="search_results" translatable="false">Search Results</string>
+    <string name="select_date" translatable="false">Select Date</string>
+    <string name="time_str" translatable="false">Time</string>
+    <string name="select_time" translatable="false">Select Time</string>
+    <string name="pick_up_location" translatable="false">Pick-up Location</string>
+    <string name="please_select_location" translatable="false">Please Select Location</string>
+    <string name="jobsite" translatable="false">Jobsite</string>
+    <string name="pick_up_contact" translatable="false">Pick-up Contact</string>
+    <string name="pick_up_contact_phone" translatable="false">Pick-up Contact Number</string>
+    <string name="please_enter_name" translatable="false">Please Enter Name</string>
+    <string name="please_enter_number" translatable="false">Please Enter Number</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="actual_pick_up_time" translatable="false">Actual Pick-up Times</string>
+    <string name="arrival_time" translatable="false">Arrival Time</string>
+    <string name="load_time" translatable="false">Load Time</string>
+    <string name="departure_time" translatable="false">Departure Time</string>
+    <string name="drop_off_date" translatable="false">Drop-off Date</string>
+    <string name="drop_off_location" translatable="false">Drop-off Location</string>
+    <string name="drop_off_contact" translatable="false">Drop-off Contact</string>
+    <string name="drop_off_contact_phone" translatable="false">Drop-off Contact Number</string>
+    <string name="round_trip" translatable="false">Round Trip</string>
+    <string name="unloading_at_jobsite_method" translatable="false">Unloading (at Jobsite) Method</string>
+    <string name="actual_drop_off_time" translatable="false">Actual Drop-off Times</string>
+    <string name="drop_off_time" translatable="false">Drop-off Time</string>
+    <string name="searching_for_inventory" translatable="false">Loading inventory</string>
+    <string name="no_inventory_found" translatable="false">No Inventory Found</string>
+    <string name="vendor" translatable="false">Vendor</string>
+    <string name="this_field_is_required" translatable="false">This field is required.</string>
+    <string name="add_equipment" translatable="false">Add Equipment</string>
+    <string name="please_enter_description" translatable="false">Please Enter Description</string>
+    <string name="lookup_equipment" translatable="false">Lookup Equipment</string>
+    <string name="rented" translatable="false">Rental</string>
+    <string name="quantity" translatable="false">Quantity</string>
+    <string name="input_method" translatable="false">Input Method</string>
+    <string name="enter_units" translatable="false">Enter Units</string>
+    <string name="locaion_validation_message" translatable="false">Either pick-up or drop-off location should be the current project.</string>
+    <string name="category" translatable="false">Category</string>
+    <string name="subcategory" translatable="false">Subcategory</string>
+    <string name="equipment_name" translatable="false">Equipment Name</string>
+    <string name="quantity_weight_validation_msg" translatable="false">Please enter a valid number for quantity and weight fields.</string>
+    <string name="select_category_subcategory_validation" translatable="false">Please first select category and then subcategory.</string>
+    <string name="select_subcategory_validation" translatable="false">Please first select category.</string>
+    <string name="comments" translatable="false">Comments</string>
+    <string name="please_enter" translatable="false">Please Enter</string>
+    <string name="enter_your_comments_here" translatable="false">Enter Your Comments here</string>
+    <string name="save_as_send" translatable="false">Save And Send</string>
+    <string name="save_and_send" translatable="false">Save and Send</string>
+    <string name="truck_size" translatable="false">Truck Size</string>
+    <string name="select_one_str" translatable="false">Please Select One</string>
+    <string name="loading_photos" translatable="false">Loading Photos</string>
+    <string name="dispute_transfer" translatable="false">Dispute Transfer</string>
+    <string name="enter_pick_up_location_here" translatable="false">Enter Pick-up Location here</string>
+    <string name="enter_drop_off_location_here" translatable="false">Enter Drop-off Location here</string>
+    <string name="pick_up_date" translatable="false">Pick-up Date</string>
+    <string name="from" translatable="false">From</string>
+    <string name="apply" translatable="false">Apply</string>
+    <string name="clear_filters" translatable="false">CLEAR FILTERS</string>
+    <string name="freight_line" translatable="false">Freight Line</string>
+    <string name="contact_number" translatable="false">Contact Number</string>
+    <!--    <string name="site_specific_info">Site Specific Info</string>-->
+    <string name="site_specific_info" translatable="false">Site Specific Info</string>
+    <string name="project_info" translatable="false">Project Info</string>
+    <string name="project_schedule" translatable="false">Project Schedule</string>
+    <string name="enter_quantity" translatable="false">Enter Quantity</string>
+    <string name="file_chooser" translatable="false">File Chooser</string>
+    <string name="share_form" translatable="false">Share Form</string>
+    <string name="no_form_found" translatable="false">No form found.</string>
+    <string name="select_trade" translatable="false">Select Trade</string>
+    <string name="linked_in_drawings" translatable="false">Linked in Drawing</string>
+    <string name="crew_no_reord_message" translatable="false">Crew records have not yet been entered for this date.</string>
+    <string name="work_details_no_reord_message" translatable="false">Work details have not yet been entered for this date.</string>
+    <string name="work_impacts_no_reord_message" translatable="false">Work impacts have not yet been entered for this date.</string>
+    <string name="drawing_folder_no_reord_message" translatable="false">Drawing Folders have not yet been created for this project.</string>
+    <string name="form_calendar_no_record_message" translatable="false">There are currently no forms for this date.</string>
+    <string name="inventory_no_record_message" translatable="false">Inventory has not yet been assigned to this project.</string>
+    <string name="form_no_record_message" translatable="false">Forms have not yet been assigned to this project.</string>
+    <string name="no_form_record_message" translatable="false">This form has not yet been filled out for this project.</string>
+    <string name="delete_form" translatable="false">Are you sure you want to delete this form?</string>
+    <string name="save_form_changes" translatable="false">Do you want to save your changes before exiting?</string>
+    <string name="ask_message_form_complete_confirmation" translatable="false">Are you sure you are ready to complete this form? You cannot make changes once complete.</string>
+    <string name="save_and_exit" translatable="false"><![CDATA[Save & Exit]]></string>
+    <string name="revision_number" translatable="false">Revision no. %1$d</string>
+    <string name="message_email_sent_success" translatable="false">Email sent successfully</string>
+
+    <string name="save_as_scheduled" translatable="false"> Save as Scheduled</string>
+    <string name="save_as_draft" translatable="false"> Save as draft</string>
+    <string name="are_you_sure_you_want_to_delete_this_photos" translatable="false">Are you sure you want to delete this photo?</string>
+    <string name="new_transfer" translatable="false">New Transfer</string>
+    <string name="no_results" translatable="false">No Results.</string>
+    <string name="a_project_team_has_not_yet_been" translatable="false">No Results.</string>
+    <string name="document_folder_no_reord_message" translatable="false">No Folders or Files have been created within this folder yet.</string>
+    <string name="folder_list_updated_just_now" translatable="false">Documents List Updated: Just Now</string>
+    <string name="folder_list_updated" translatable="false">Documents List Updated: %1s</string>
+    <string name="drawings_have_not_yet_been" translatable="false">Drawings have not yet been uploaded to this folder.</string>
+
+
+    <string name="rfi_information" translatable="false">RFI Information</string>
+    <string name="rfi_reference_drawing_number" translatable="false">Reference Drawing Number</string>
+    <string name="rfi_reference_spec" translatable="false">Reference Spec Section</string>
+    <string name="rfi_title" translatable="false">RFI Title</string>
+    <string name="rfi_cost_impact" translatable="false">Cost Impact</string>
+    <string name="rfi_schedule_impact" translatable="false">Schedule Impact</string>
+    <string name="rfi_author" translatable="false">RFI Author</string>
+    <string name="rfis" translatable="false">RFIs</string>
+    <string name="date_submitted" translatable="false">Date Submitted</string>
+    <string name="received_from" translatable="false">Received From</string>
+
+    <string name="rfi_responsible" translatable="false">Responsible Personnel and Distribution</string>
+
+    <string name="rfis_date_requirement" translatable="false">RFI Date Requirements</string>
+    <string name="received_date" translatable="false">Received Date</string>
+    <string name="response_requested" translatable="false">Response Requested (days) </string>
+    <string name="rfi_detail" translatable="false">RFI Details</string>
+    <string name="no_rfi_offline_message" translatable="false">RFI records have not been synced for Offline Access. Reconnect to internet to sync RFI records.</string>
+    <string name="no_rfi_detail_message" translatable="false">This RFI is not synced for Offline Access. Reconnect to internet to sync this RFI.</string>
+    <string name="question" translatable="false">Question</string>
+    <string name="message_no_open_punch_list_items_are_available" translatable="false">No open punch list items are available.</string>
+    <string name="rfi_assigned_to" translatable="false">Assigned To</string>
+    <string name="tbd" translatable="false">TBD</string>
+    <string name="rfi_replies" translatable="false">Replies</string>
+    <string name="rfi_detail_offline_message" translatable="false">Reconnect to internet access to ensure all RFI updates and details have been synced.</string>
+    <string name="attachments_label" translatable="false">Attachment</string>
+    <string name="message_file_not_found" translatable="false">This file cannot be found.</string>
+    <string name="message_app_update_found" translatable="false">An update to the ProNovos app is available. Would you like to Update?</string>
+    <string name="button_text_not_now" translatable="false">Not now</string>
+    <string name="button_text_update" translatable="false">Update</string>
+    <string name="alert_title_update_available" translatable="false">Update Available</string>
+
+    <string name="select" translatable="false">Select</string>
+    <string name="add" translatable="false">Add</string>
+    <string name="assigned_cc" translatable="false">CC</string>
+    <string name="assignee_name" translatable="false">Assignee Name</string>
+
+    <!-- Punch list add edit page -->
+    <string name="punch_list_description" translatable="false">Description</string>
+    <string name="mark_complete" translatable="false">Mark Complete</string>
+    <string name="review" translatable="false">Review</string>
+    <string name="approved" translatable="false">Approved</string>
+    <string name="recomplete" translatable="false">Recomplete</string>
+    <string name="punch_list_reject_text_hint" translatable="false">Type your comments here...</string>
+    <string name="punchlist_reject_reason_lable" translatable="false">Reason for rejection of \' %1$s \' </string>
+    <string name="punlist_reject_btn_lable" translatable="false">Reject</string>
+    <string name="punchlist_history_status_sub_title" translatable="false">Make changes and click Complete to reopen.</string>
+    <string name="punlist_status_history" translatable="false">Status History</string>
+    <string name="punchlist_status_completed" translatable="false">Completed</string>
+    <string name="approve" translatable="false">Approve</string>
+    <string name="punch_list_history" translatable="false">Punch List History</string>
+    <string name="punchlist_history_sub_title" translatable="false">by %1$s on %2$s</string>
+    <string name="show_history" translatable="false">Show History</string>
+    <string name="show_history_status" translatable="false"> Created</string>
+    <string name="file" translatable="false">File</string>
+    <string name="offline_message_for_download_img" translatable="false">This image is not downloaded to your device. You must be online to download image.</string>
+    <string name="form_ribbon_message" translatable="false">This Form has not been sent.</string>
+    <string name="email_sent" translatable="false"> This Form was sent on %1$s </string>
+    <string name="email_failed" translatable="false"> The Form failed to send on %1$s </string>
+    <string name="email_in_process" translatable="false"> The Form is in the process of being sent. </string>
+
+    <string name="submittals" translatable="false">Submittals</string>
+    <string name="issue_tracking" translatable="false">Issue Tracking</string>
+    <string name="information" translatable="false">Information</string>
+    <string name="submittals_number" translatable="false">Submittal Number</string>
+    <string name="revision_number_text" translatable="false">Revision Number</string>
+    <string name="title" translatable="false">Title</string>
+    <string name="ball_in_court" translatable="false">Ball in Court</string>
+    <string name="spec_section" translatable="false">Spec Section</string>
+    <string name="no_submittal_offline_message" translatable="false">Submittal records have not been synced for Offline Access. Reconnect to internet to sync Submittal records.</string>
+    <string name="details" translatable="false">Details</string>
+    <string name="responsible" translatable="false">Responsible Personnel and Distribution</string>
+    <string name="type" translatable="false">Type</string>
+    <string name="author" translatable="false">Author</string>
+    <string name="date_requirement" translatable="false">Date Requirements</string>
+    <string name="received" translatable="false">Received</string>
+    <string name="due" translatable="false">Due</string>
+    <string name="onsite" translatable="false">Onsite</string>
+    <string name="lead_time" translatable="false">Lead Time</string>
+    <string name="name" translatable="false">Name</string>
+    <string name="response" translatable="false">Response</string>
+    <string name="we_have" translatable="false">We have column offset</string>
+    <string name="sub_not_sent" translatable="false">This Submittal has not been sent.</string>
+    <string name="sub_sent" translatable="false">This Submittal was sent on %1$s.</string>
+    <string name="submittal_detail_offline_message" translatable="false">Reconnect to internet access to ensure all Submittal updates and details have been synced.</string>
+    <string name="current_res_st" translatable="false">Current Response Status</string>
+    <string name="on" translatable="false">on %1$s</string>
+    <string name="cc_submittal" translatable="false">CC</string>
+    <string name="attachments" translatable="false">Attachments</string>
+    <string name="detail_not_synced_internet" translatable="false">Details are not synced yet please try again once the internet is available.</string>
+    <string name="detail_not_synced" translatable="false">Details are not synced yet please try after some time.</string>
+    <string name="no_results_submittals" translatable="false">No Submittals available.</string>
+    <string name="created" translatable="false">Created</string>
+    <string name="please_enter_title" translatable="false">Please enter title</string>
+    <string name="no_issues_available" translatable="false">No Issues available.</string>
+    <string name="select_status" translatable="false">Select Status</string>
+    <string name="resolved" translatable="false">Resolved</string>
+    <string name="some_error_occurred_while_fetching_details" translatable="false">Some error occurred while fetching details</string>
+    <string name="additional_days" translatable="false">Additional Days</string>
+    <string name="cost_rom" translatable="false">Cost ROM</string>
+    <string name="enter_amount" translatable="false">Enter amount</string>
+    <string name="enter_days" translatable="false">Enter days</string>
+    <string name="delete_breakdown" translatable="false">Delete Breakdown</string>
+    <string name="hash" translatable="false">#</string>
+    <string name="issue_number" translatable="false">Issue Number</string>
+    <string name="enter_title" translatable="false">Enter title</string>
+    <string name="impact_and_root_cause" translatable="false">Impact and Root Cause</string>
+    <string name="impact" translatable="false">Impact</string>
+    <string name="root_cause" translatable="false">Root Cause</string>
+    <string name="please_select_the_primary_reason_for_the_issue" translatable="false">Please select the primary reason for the issue</string>
+    <string name="item_breakdown" translatable="false">Item Breakdown</string>
+    <string name="add_breakdown" translatable="false">Add Breakdown</string>
+    <string name="right_arrow" translatable="false">right arrow</string>
+    <string name="confirm" translatable="false">Confirm</string>
+    <string name="report_an_issue" translatable="false">Report an issue</string>
+    <string name="type_your_issue_here">Type your issue here...</string>
+    <string name="please_provides_comments" translatable="false">Please provide comments for issue!</string>
+    <string name="report" translatable="false">Report</string>
+</resources>

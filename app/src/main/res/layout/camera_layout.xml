@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activityMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/contentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/connectingTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@android:color/black"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:text="Connecting..."
+                android:textColor="@color/black_3c3c3c"
+                android:textSize="@dimen/dashboard_text_size" />
+
+            <!--<com.pronovoscm.camerakit.CameraView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/camera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:ckCropOutput="false"
+                app:ckDoubleTapToToggleFacing="true"
+                app:ckFacing="back"
+                app:ckFlash="off"
+                app:ckFocus="tapWithMarker"
+                app:ckJpegQuality="100"
+                app:ckMethod="standard"
+                app:ckPinchToZoom="true"
+                app:ckVideoQuality="highest"
+                app:ckZoom="0"/>-->
+            <com.pronovoscm.utils.customcamera.CameraView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/camera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:keepScreenOn="true"
+                app:cameraAudio="on"
+                app:cameraCropOutput="false"
+                app:cameraFacing="back"
+                app:cameraFlash="off"
+                app:cameraGestureLongTap="none"
+                app:cameraGesturePinch="zoom"
+                app:cameraGestureScrollHorizontal="exposureCorrection"
+                app:cameraGestureScrollVertical="none"
+                app:cameraGestureTap="focusWithMarker"
+                app:cameraGrid="off"
+                app:cameraJpegQuality="100"
+                app:cameraPlaySounds="true"
+                app:cameraSessionType="picture" />
+
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/blackCover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="top">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/backImageView"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:background="@drawable/ic_arrow_camera"
+                    android:contentDescription="@string/pronovos_image"
+                    android:foregroundGravity="center" />
+
+                <ImageView
+                    android:id="@+id/backImageView1"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:background="@drawable/ic_arrow_camera"
+                    android:contentDescription="@string/pronovos_image"
+                    android:foregroundGravity="center"
+                    android:padding="@dimen/_51sdp"
+                    android:rotation="90"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.pronovoscm.CameraControls xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cameraControls"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_gravity="bottom"
+            android:elevation="7dp"
+            app:camera="@+id/camera"
+            app:cover="@+id/blackCover" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/photoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

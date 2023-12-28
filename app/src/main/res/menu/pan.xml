@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/free_text"
+          android:title="@string/annot_free_text"
+          android:icon="@drawable/ic_line" />
+    <item android:id="@+id/floating_sig"
+          android:icon="@drawable/ic_text"
+          android:title="@string/select" />
+</menu>
